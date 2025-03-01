@@ -281,37 +281,41 @@ margin-top: 30px;
 }
 .wave{
  width: 100%; 
-}
+ }
 
 .right_star{
 position: absolute;
-right: 0;
-top: -100px;
+right: 380px;
+top: -70px;
 z-index: -1;
+/* transform: rotate(30deg); */
+
 }
 
 .right_star_rocket{
 position: absolute;
-right: 0;
-top: 0;
+right: 380px;
+top: 50px;
+
  }
 
 .left_star{
 position: absolute;
-left: 0;
-top: -100px;
+left: 380px;
+top: -70px;
 z-index: -1;
+/* transform: rotate(-30deg); */
 }
 
 .left_star_rocket{
 position: absolute;
-left: 0;
-top: 0;
+left: 380px;
+top: 50px;
  }
 
 .views_count{
 position: absolute;
-top: 20px;
+top: 80px;
 left: 50%;
 transform: translateX(-50%);
 font-weight: bold;
@@ -319,4 +323,9 @@ font-size: 98px;
 color: #0618C4;
 filter: drop-shadow(0px 13px 0px #94D1FF);
 
+}
+@media screen and (max-width: 1100px){
+    .views_count{
+        font-size: 70px !important;
+        }
 }
