@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------- google font ----------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--------------------------------------------->
     <!-- animate on scroll -->
     <link
       rel="stylesheet"
@@ -10,9 +18,9 @@
     />
     <!-- ------------------ -->
     <link rel="stylesheet" href="css/header.css?v=1.0" />
-    <link rel="stylesheet" href="css/home_style.css?v=1.2" />
+    <link rel="stylesheet" href="css/home.css?v=1.0" />
     <link rel="stylesheet" href="css/footer.css?v=1.0" />
-    <link rel="shortcut icon" type="image/x-icon" href="img/f-icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo_svg.svg" />
     <!-- //// -->
     <meta
       http-equiv="Cache-Control"
@@ -21,11 +29,110 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <!-- //// -->
-    <title>فوزي</title>
+    <title>Fawzy</title>
   </head>
   <body>
     <!-- start header -->
     <a id="to-top"></a>
+    <header class="main-header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo_svg.svg" alt="" />
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="d_nav">
+            <li>
+              <a class="d_links_youtube" id="link1" href=""
+                >قناة اليوتيوب
+                <img class="play" src="images/play_red.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="d_links" id="link2" href="">أعمالي</a>
+            </li>
+            <li>
+              <a class="d_links" id="link6" href="">خدماتي</a>
+            </li>
+            <li><a class="d_links" id="link4" href="">الدونة</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- <div class="tringle_container">
+      <div class="triangle"></div>
+    </div> -->
+    <!-- end header -->
+    <section class="headline_and_image">
+      <section class="container">
+        <div class="headline_and_image_box">
+          <div class="head_box">
+            <h1 class="first_head">
+              شريكك <br />
+              <span class="first_head_2"
+                >الإبداعي
+                <div class="span_rocket_box">
+                  <img
+                    class="span_rocket_image"
+                    src="images/first_head_rocket.svg"
+                    alt=""
+                  />
+                </div>
+              </span>
+            </h1>
+            <p class="bio">
+              محرر فيديو محترف بخبرة تزيد عن 5 سنوات في مجال
+              <span class="bio_span">
+                إنتــــــــــــاج المحتــــــــوى المـــــــــــرئي
+                والمــــونتاج</span
+              >
+              و عمـــــلت مـــع العديد من المؤسسات الكبرى وصناع المحتوى في الوطن
+              العربي والعالم
+            </p>
+            <a class="contact_me" href=""> تواصل معي </a>
+          </div>
+          <div class="image_box">
+            <img src="images/fawzy.png" alt="" />
+            <div class="circle"></div>
+            <img class="big_right_arrow" src="images/big_arrow.svg" alt="" />
+            <img
+              class="small_right_arrow"
+              src="images/small_arrow.svg"
+              alt=""
+            />
+            <img
+              class="recta_with_name"
+              src="images/first_left_rect.svg"
+              alt=""
+            />
+            <h2 class="fawzy_name">محمــــــود فــــــوزي</h2>
+            <span class="first_number">+100 M</span>
+            <span class="second_number">+100 M</span>
+            <span class="third_number">+100 M</span>
+            <span class="fourth_number">+100 M</span>
+            <div class="first_bg_thin_lines"></div>
+            <div class="second_bg_thin_lines"></div>
+            <div class="third_bg_thin_lines"></div>
+            <div class="fourth_bg_thin_lines"></div>
+            <div class="fifth_bg_thin_lines"></div>
+            <div class="sixth_bg_thin_lines"></div>
+            <div class="seventh_bg_thin_lines"></div>
+            <div class="grid_pattern"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="views_number_section">
+      <div class="wave_box">
+        <img class="wave" src="images/wave.svg" alt="" />
+        <img class="right_star" src="images/right_star.svg"></img>
+        <img class="right_star_rocket" src="images/right_star_rocket.svg"></img>
+        <img class="left_star" src="images/left_star.svg"></img>
+        <img class="left_star_rocket" src="images/left_star_rocket.svg"></img>
+        <span class="views_count">+ 100,000,000</span>
+      </div>
+    </section>
     <!-- animate on scroll -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -39,5 +146,6 @@
       });
     </script>
     <!-- ---------------- -->
+    <script src="js/header.js"></script>
   </body>
 </html>

@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+@font-face {
+    font-family: "fawzy";
+    src: url(KoKhalaya-5-5.otf);
+}
+
+body{
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.container{
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+/* media query for main container */
+/* desktop */
+@media screen and (min-width: 1440px){
+    .container {
+        width: 1380px;
+    }
+}
+/* laptop */
+@media screen and (min-width: 1024px) and (max-width:1439px){
+    .container {
+        width: 97%;
+    }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width:1023px){
+    .container {
+        width: 99%;
+    }
+}
+/* mobile */
+@media screen and (max-width: 767px){
+    .container {
+        width: 100%;
+    }
+}
+
+.main-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    height: 153px;
+    direction: rtl;
+    padding: 0 70px;
+}
+@media screen and (max-width: 767px){
+    .main-header{
+        background-color: #e7f5ff;
+    }
+}
+
+.main-header{
+    background-color: #C9E8FF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+ }
+.main-header::before{
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background-color: #ffffff;
+    border-bottom: 3px solid #C9E8FF;
+    bottom: 0px;
+ }
+
+.logo{
+    transform: rotate(-7.30deg);
+}
+
+.d_nav{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+
+}
+
+.d_links{
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+    font-weight: 800;
+    overflow: hidden;
+    padding:10px 30px ;
+    border-radius: 40px;
+    margin-left: 15px;
+    color: #ffffff;
+    background-color: #0C00B5;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+
+@media screen and (max-width:970px){
+    .d_links{
+        font-size: 13px;
+        margin-left: 5px;
+    }
+}
+.d_links_youtube{
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    font-weight: 800;
+    overflow: hidden;
+    padding:10px 30px ;
+    border-radius: 40px;
+    margin-left: 15px;
+    color: #ffffff;
+    background-color: #FF7174;
+    border: 2px solid #FF0000;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+@media screen and (max-width:970px){
+    .d_links_youtube{
+        font-size: 13px;
+        margin-left: 5px;
+    }
+}
+/* /////////////////////////////////////////// */
+/* .tringle_container{
+    transform: rotate(90deg);
+    z-index: 54545546486;
+    position: absolute;
+    bottom: -200px;
+  }
+.triangle {
+	position: relative;
+	background-color: orange;
+}
+.triangle:before,
+.triangle:after {
+	content: "";
+	position: absolute;
+	background-color: inherit;
+ }
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  36px;
+	height: 43px;
+	border-top-right-radius: 30%;
+ }
+
+.triangle {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+} */
+/* //////////////////////////////////////////////////////////// */
+.play{
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+}
+
+
+
+
+/* /// */
+#to-top {
+    display: inline-block;
+    background-color: #616CB5;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #to-top::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #to-top:hover {
+    cursor: pointer;
+    background-color: #3a416e;
+  }
+  #to-top:active {
+    background-color: #3a416e;
+  }
+  #to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  @media screen and (max-width:767px){
+    #to-top {
+ 
+        width: 35px;
+        height: 35px;
+        bottom: 15px;
+        right: 15px;
+ 
+      }
+      #to-top::after {
+          font-size: 1.2em;
+        line-height: 37px;
+ 
+      }
+  }
