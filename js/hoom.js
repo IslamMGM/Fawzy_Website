@@ -14,7 +14,7 @@ window.addEventListener("scroll", function () {
   ) {
     let start = 0;
     let end = parseInt(countElement.textContent.replace(/[^0-9]/g, ""), 10);
-    let duration = 1200;
+    let duration = 1500;
     let startTime = null;
 
     function animateCount(timestamp) {

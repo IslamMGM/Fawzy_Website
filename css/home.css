@@ -3,7 +3,7 @@ margin-top: 250px;
 direction: rtl;
  }
 .headline_and_image .container{
-    padding: 0 0px;
+    padding: 0 20px;
  }
 .headline_and_image_box{
     display: flex;
@@ -274,48 +274,54 @@ margin-top: 30px;
 .views_number_section{
     margin-top: 150px;
     margin-bottom: 150px;
-}
-.wave_box{
     position: relative;
 
 }
+.views_number_section .container{
+    width: 1345px;
+
+}
+.wave_box{
+    position: relative;
+}
 .wave{
  width: 100%; 
+ position: absolute;
  }
 
 .right_star{
 position: absolute;
-right: 380px;
+right: 0;
 top: -70px;
 z-index: -1;
-/* transform: rotate(30deg); */
+transform: rotate(30deg);
 
 }
 
 .right_star_rocket{
 position: absolute;
-right: 380px;
+right: 0;
 top: 50px;
 
  }
 
 .left_star{
 position: absolute;
-left: 380px;
+left: 0;
 top: -70px;
 z-index: -1;
-/* transform: rotate(-30deg); */
+transform: rotate(-30deg);
 }
 
 .left_star_rocket{
 position: absolute;
-left: 380px;
+left: 0;
 top: 50px;
  }
 
 .views_count{
 position: absolute;
-top: 80px;
+top: 50px;
 left: 50%;
 transform: translateX(-50%);
 font-weight: bold;

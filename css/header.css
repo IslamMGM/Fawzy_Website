@@ -26,7 +26,7 @@ html {
 /* desktop */
 @media screen and (min-width: 1440px){
     .container {
-        width: 1380px;
+        width: 1500px;
     }
 }
 /* laptop */
@@ -56,7 +56,7 @@ html {
     z-index: 1;
     height: 153px;
     direction: rtl;
-    padding: 0 70px;
+    padding: 0 90px;
 }
 @media screen and (max-width: 767px){
     .main-header{
