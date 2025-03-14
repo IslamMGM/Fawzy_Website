@@ -1,0 +1,218 @@
+.main_footer{
+    direction: rtl;
+     width: 100%;
+    min-height: 370px;
+    background: #040935;
+    padding: 100px;
+ }
+
+ .main_footer_box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    margin: 0 auto;
+    max-width: 1200px
+ }
+
+ .logo_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ }
+ .logo_img{
+    width: fit-content;
+    height: fit-content;
+ }
+ .logo_paragraph{
+font-family: 'IBM Plex Sans Arabic';
+font-weight: 400;
+font-size: 14px;
+line-height: 1.7;
+text-align: right;
+color: #FFFFFF;
+ }
+ .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* width: fit-content; */
+    margin: 0 auto;
+    row-gap: 15px;
+ }
+
+ .footer_link{
+font-family: 'IBM Plex Sans Arabic';
+font-weight: 500;
+font-size: 21px;
+text-align: right;
+color: #FFFFFF;
+text-decoration: none;
+transition: 0.3s;
+
+ }
+ .footer_link:hover{
+transform: translateY(-5px);
+color: #8891e4;
+ }
+
+ .email_register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* width: fit-content; */
+    margin: 0 auto;
+    row-gap: 15px;
+    
+ }
+
+ .register_head{
+font-family: 'IBM Plex Sans Arabic';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+text-align: right;
+color: #FFFFFF;
+ }
+
+ .register_input{
+border: 1px solid #FFFFFF;
+border-radius: 20px;
+width: 250px;
+padding: 10px 15px;
+background-color: transparent;
+direction: ltr;
+transition: 0.2s;
+outline: none;
+color: #ffffff;
+font-size: 17px;
+ }
+ .register_input::placeholder {
+    opacity: 0;
+    visibility: hidden;
+    color: transparent;
+}
+ #blink_cursor_email_register{
+        caret-color: #ffffff;
+ }
+
+ .register_input:focus {
+    border: 1px solid #8891e4;
+    transition: 0.3s;
+    outline: none;
+}
+ .register_input:hover {
+    border: 1px solid #8891e4;
+    transition: 0.3s;
+    outline: none;
+}
+ .register_input_container{
+    position: relative;
+
+
+ }
+
+ .placeholder {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    top: 0;
+    padding: 11px 20px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+    background-color: transparent;
+    border-radius: 20px;
+
+}
+
+.register_input:focus ~ .placeholder{
+    top: -12px;
+    left: 25px;
+    z-index: 5;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    background: #040935;
+    padding: 0 10px;
+}
+.register_input:not(:placeholder-shown):not(:focus) ~ .placeholder{
+    top: -12px;
+    left: 25px;
+    z-index: 5;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    background: #040935;
+    padding: 0 10px;
+}
+
+ /* .register_input::-webkit-input-placeholder {
+    color: #FFFFFF;
+    opacity: 0.8;
+  } */
+  
+ .register_submit{
+font-family: 'IBM Plex Sans Arabic';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+text-align: right;
+color: #FFFFFF;
+text-decoration: none;
+background: #0618C4;
+border-radius: 52px;
+padding: 5px 20px;
+ }
+
+ /* //////////////// */
+
+.sub_footer{
+width: 100%;
+height: 60px;
+background: #D3D3D3;
+direction: rtl;
+padding: 15px 0;
+
+}
+.social_link_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.social_link_box::before{
+    position: absolute;
+    content: "R";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -10px;
+    bottom: 1px;
+    color: #888888;
+    border: 1px solid #888888;
+    font-size: 6px;
+    font-weight: 800;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+}
+.social_link{
+color: #888888;
+font-size: 30px;
+cursor: pointer;
+transition: 0.3s;
+
+}
+.social_link:hover{
+color: #424242;
+}
+

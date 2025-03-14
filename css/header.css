@@ -82,7 +82,7 @@ html {
  }
 
 .logo{
-    transform: rotate(-7.30deg);
+    /* transform: rotate(-7.30deg); */
 }
 
 .d_nav{
@@ -91,8 +91,23 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
-
+    position: relative;
 }
+.d_nav::before{
+content: "";
+position: absolute;
+height: 100%;
+width: 100%;
+left: 53%;
+top: 50%;
+transform: translate(-50%, -50%);
+border: 2px solid #ffffff;
+border-radius: 40px;
+padding-top: 17px;
+padding-bottom: 17px;
+padding-right: 20px;
+}
+
 
 .d_links{
     text-decoration: none;
@@ -102,11 +117,25 @@ html {
     overflow: hidden;
     padding:10px 30px ;
     border-radius: 40px;
-    margin-left: 15px;
+    margin-left: 50px;
     color: #ffffff;
     background-color: #0C00B5;
     cursor: pointer;
     text-wrap: nowrap;
+}
+.d_links::before{
+position: absolute;
+content: "";
+width: 100%;
+height: 100%;
+left: -35px;
+top: -20px;
+padding-top: 10px;
+padding-bottom: 6px;
+border: 2px solid #ffffff;
+border-radius: 40px 0 0 40px;  
+border-right: 0; 
+margin: 10px;
 }
 
 
@@ -172,7 +201,7 @@ html {
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
 } */
 /* //////////////////////////////////////////////////////////// */
-.play{
+.play_header{
     position: absolute;
     left: -20px;
     bottom: 0;
