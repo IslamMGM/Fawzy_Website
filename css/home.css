@@ -770,7 +770,6 @@ text-align: right;
 color: #0618C4;
 transform: rotate(-1.99deg);
 z-index: 5;
-
 }
 .omlaay_sub_head{
 font-style: normal;
@@ -781,19 +780,19 @@ text-align: right;
 color: #000000;
 direction: ltr;
 position: relative;
-margin-top: 5px;
+margin-top: 10px;
 }
 
 .emoj_hand{
     position: absolute;
-    left: 80px;
+    left: 20px;
     top: 0px;
 }
 .omlaay_shape{
     position: absolute;
     z-index: -1;
     width: 630px;
-    top: 37px;
+    top: 45px;
     right: 50%;
     transform: translateX(50%);
 }
@@ -811,7 +810,7 @@ margin-top: 5px;
 .omlaay_net_background{
     position: absolute;
      width: 100%;
-     height: 400px;
+     height: 580px;
     top: -180px;
     right: 0;
     background-color: transparent;
@@ -825,10 +824,10 @@ margin-top: 5px;
 /* Animation_omlaa_logo */
 :root {
     --gap-width_logos: 150px;
-    --slide-width_logos: 85px;
-    --slide-height_logos: 85px;
-     --scroll-duration_logos: 15s;  
-    --total-slides_logos: 5;  
+    --slide-width_logos: 180px;
+    --slide-height_logos: 180px;
+     --scroll-duration_logos: 25s;  
+    --total-slides_logos: 8;  
     --total-width_logos: calc(
       (var(--slide-width_logos) + var(--gap-width_logos)) * var(--total-slides_logos)
     );
@@ -840,7 +839,7 @@ margin-top: 5px;
     overflow: hidden;
     width: 100%;
     position: absolute;
-    top: -550px;
+    top: -560px;
   }
 
   .logos_carousel-track {
@@ -853,24 +852,43 @@ margin-top: 5px;
   }
 
   .logos_slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* background: #C9E8FF; */
     flex: 0 0 var(--slide-width_logos);
-    height: var(--slide-height_logos);
+    /* height: var(--slide-height_logos); */
      position: relative;
-    overflow: hidden;
+    overflow: visible !important;
     /* cursor: pointer; */
     transition: 0.3s ease; 
-    z-index: 55;
+    /* z-index: 1; */
     /* border: 12px solid #C9E8FF;
     border-radius: 40px; */
     margin-top: 90px;
    }
  
-
+.logos_slide h4{
+  position: absolute;
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  /* margin-top: 25px; */
+  color: #1D1981;
+  font-weight: 600;
+  /* text-wrap: nowrap; */
+  bottom: -10px;
+}
 
   .logos_img{
     width: 100%;
     height: 100%;
+    border: 3px solid #1c198170;
+    /* padding: 10px; */
+    border-radius: 10px;
+    /* background-color: #c3bae9; */
+
   }
   /* .logos_slide:hover{
     transform: translateY(-10px);
@@ -894,10 +912,10 @@ margin-top: 5px;
 /* Animation_omlaa_logo left */
 :root {
     --gap-width_logos_left: 150px;
-    --slide-width_logos_left: 85px;
-    --slide-height_logos_left: 85px;
-     --scroll-duration_logos_left: 15s;  
-    --total-slides_logos_left: 5;  
+    --slide-width_logos_left: 180px;
+    --slide-height_logos_left: 180px;
+     --scroll-duration_logos_left: 25s;  
+    --total-slides_logos_left: 9;  
     --total-width_logos_left: calc(
       (var(--slide-width_logos_left) + var(--gap-width_logos_left)) * var(--total-slides_logos_left)
     );
@@ -909,7 +927,7 @@ margin-top: 5px;
     overflow: hidden;
     width: 100%;
     position: absolute;
-    top: -420px;
+    top: -320px;
   }
 
   .logos_carousel-track_left {
@@ -922,9 +940,13 @@ margin-top: 5px;
   }
 
   .logos_slide_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* background: #C9E8FF; */
     flex: 0 0 var(--slide-width_logos_left);
-    height: var(--slide-height_logos_left);
+    /* height: var(--slide-height_logos_left); */
      position: relative;
     overflow: hidden;
     /* cursor: pointer; */
@@ -934,12 +956,27 @@ margin-top: 5px;
     border-radius: 40px; */
     margin-top: 90px;
    }
- 
+   .logos_slide_left h4{
+    position: absolute;
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    /* margin-top: 25px; */
+    color: #1D1981;
+    font-weight: 600;
+    /* text-wrap: nowrap; */
+    bottom: -10px;
+  }
 
 
   .logos_img{
     width: 100%;
     height: 100%;
+    border: 3px solid #1c198170;
+    /* padding: 10px; */
+    border-radius: 10px;
+    /* background-color: #c3bae9; */
+
   }
   /* .logos_slide_left:hover{
     transform: translateY(-10px);
@@ -962,7 +999,7 @@ margin-top: 5px;
 /* //////////////////////////////////////////////////////// */
 .podcast_shorts_box{
     margin: 0 auto;
-    margin-top: -70px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 @media screen and (min-width: 1440px){
