@@ -1,38 +1,76 @@
 /////////////////////////////////////////////////////////
 ////////// number animation for views count/////////////
-window.addEventListener("scroll", function () {
-  function numberWithCommas(x) {
-    return "+ " + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+// window.addEventListener("scroll", function () {
+//   function numberWithCommas(x) {
+//     return "+ " + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//   }
 
-  const gotoElement = document.querySelector(".views_count");
-  const countElement = document.querySelector(".views_count");
+//   const countElement = document.querySelector(".views_count");
 
-  if (
-    gotoElement &&
-    countElement &&
-    gotoElement.getBoundingClientRect().top <= window.innerHeight &&
-    !gotoElement.classList.contains("animated")
-  ) {
-    let start = 0;
-    let end = parseInt(countElement.textContent.replace(/[^0-9]/g, ""), 10);
-    let duration = 1500;
-    let startTime = null;
+//   if (!countElement) return;
 
-    function animateCount(timestamp) {
-      if (!startTime) startTime = timestamp;
-      let progress = timestamp - startTime;
-      let current = Math.min(start + (progress / duration) * end, end);
-      countElement.textContent = numberWithCommas(Math.ceil(current));
-      if (progress < duration) {
-        requestAnimationFrame(animateCount);
-      }
-    }
+//   const rect = countElement.getBoundingClientRect();
+//   const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
 
-    requestAnimationFrame(animateCount);
-    gotoElement.classList.add("animated");
-  }
+//   if (isVisible) {
+//     if (!countElement.classList.contains("animated")) {
+//       let start = 0;
+//       let end = parseInt(countElement.textContent.replace(/[^0-9]/g, ""), 10);
+//       let duration = 1500;
+//       let startTime = null;
+
+//       function animateCount(timestamp) {
+//         if (!startTime) startTime = timestamp;
+//         let progress = timestamp - startTime;
+//         let current = Math.min(start + (progress / duration) * end, end);
+//         countElement.textContent = numberWithCommas(Math.ceil(current));
+//         if (progress < duration) {
+//           requestAnimationFrame(animateCount);
+//         }
+//       }
+
+//       requestAnimationFrame(animateCount);
+//       countElement.classList.add("animated");
+//     }
+//   } else {
+//     // Reset the flag so it can animate again
+//     countElement.classList.remove("animated");
+//   }
+// });
+// Initialize Odometer
+var odometer2 = new Odometer({
+  el: document.querySelector(".odometer2"),
+  value: 0, // Start value
+  theme: "minimal",
 });
+
+// Function to reset and animate the odometer
+function animateOdometer() {
+  odometer2.update(0); // Reset to initial value
+  setTimeout(() => {
+    odometer2.update(100000000); // Animate to final value
+  }, 50); // Small delay to allow reset to complete
+}
+
+// Set up Intersection Observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateOdometer();
+      }
+    });
+  },
+  {
+    threshold: 0.5, // Trigger when at least 50% of the element is visible
+  }
+);
+
+// Observe the odometer element
+const odometerElement = document.querySelector(".odometer2");
+if (odometerElement) {
+  observer.observe(odometerElement);
+}
 // /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 ////////// number animation for videos count/////////////
@@ -180,41 +218,41 @@ document.addEventListener("DOMContentLoaded", () => {
 // /////////////////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////
 // ///////// pause the logos slider when hovering any slide /////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", () => {
-  const carouselTrack = document.querySelector(".logos_carousel-track");
-  const logos_slide = document.querySelectorAll(".logos_slide");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const carouselTrack = document.querySelector(".logos_carousel-track");
+//   const logos_slide = document.querySelectorAll(".logos_slide");
 
-  // Pause on hover for individual slides
-  logos_slide.forEach((slide_logo) => {
-    slide_logo.addEventListener("mouseenter", () => {
-      carouselTrack.style.animationPlayState = "paused";
-    });
+//   // Pause on hover for individual slides
+//   logos_slide.forEach((slide_logo) => {
+//     slide_logo.addEventListener("mouseenter", () => {
+//       carouselTrack.style.animationPlayState = "paused";
+//     });
 
-    slide_logo.addEventListener("mouseleave", () => {
-      carouselTrack.style.animationPlayState = "running";
-    });
-  });
-});
+//     slide_logo.addEventListener("mouseleave", () => {
+//       carouselTrack.style.animationPlayState = "running";
+//     });
+//   });
+// });
 // /////////////////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////
 // ///////// pause the second logos slider when hovering any slide /////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", () => {
-  const carouselTrack_left = document.querySelector(
-    ".logos_carousel-track_left"
-  );
-  const logos_slide_left = document.querySelectorAll(".logos_slide_left");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const carouselTrack_left = document.querySelector(
+//     ".logos_carousel-track_left"
+//   );
+//   const logos_slide_left = document.querySelectorAll(".logos_slide_left");
 
-  // Pause on hover for individual slides
-  logos_slide_left.forEach((slide_logo_left) => {
-    slide_logo_left.addEventListener("mouseenter", () => {
-      carouselTrack_left.style.animationPlayState = "paused";
-    });
+//   // Pause on hover for individual slides
+//   logos_slide_left.forEach((slide_logo_left) => {
+//     slide_logo_left.addEventListener("mouseenter", () => {
+//       carouselTrack_left.style.animationPlayState = "paused";
+//     });
 
-    slide_logo_left.addEventListener("mouseleave", () => {
-      carouselTrack_left.style.animationPlayState = "running";
-    });
-  });
-});
+//     slide_logo_left.addEventListener("mouseleave", () => {
+//       carouselTrack_left.style.animationPlayState = "running";
+//     });
+//   });
+// });
 // /////////////////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////

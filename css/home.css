@@ -7,7 +7,8 @@ direction: rtl;
  }
 .headline_and_image_box{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    column-gap: 200px;
     align-items: center;
 }
 .head_box{
@@ -22,7 +23,7 @@ color: #0C00B5;
     transform: rotate(-7deg);
     font-weight: 400;
     z-index: -1;
-    margin-right: 35px;
+    margin-right: 110px;
 }
 .ract_ibda3y_box{
    position: relative;
@@ -30,18 +31,26 @@ color: #0C00B5;
    z-index: -5;
    width: fit-content;
    }
+
+   .ract_ibda3y_image{
+    height: 200px;
+   }
 .ract_ibda3y_box::before{
 position: absolute;
 content: "الإبداعي";
 font-family: "fawzy";
-font-size: 92px;
+font-size: 100px;
 color: #D7F0F2;
 width: 100%;
 height: 100%;
-top: 14px;
-right: 60px;
+top: 30px;
+right: 100px;
 transform: rotate(-3deg);
 
+   }
+
+   .ract_ibda3y_frame_image{
+    height: 200px;
    }
 .span_rocket_box{
     position: absolute;
@@ -299,16 +308,15 @@ padding-left: 8px;
 
 .right_star{
 position: absolute;
-right: 0;
+right: 0px;
 top: -350px;
 z-index: -1;
-/* transform: rotate(28deg);s */
 
 }
 
 .right_star_rocket{
 position: absolute;
-right: -35px;
+right: 25px;
 top: -210px;
 width: 380px;
 height: 337px;
@@ -316,15 +324,14 @@ height: 337px;
 
 .left_star{
 position: absolute;
-left: 0;
-top: -320px;
+left: 0px;
+top: -350px;
 z-index: -1;
-/* transform: rotate(-8deg); */
 }
 
 .left_star_rocket{
 position: absolute;
-left: -35px;
+left: 25px;
 top: -210px;
 width: 380px;
 height: 337px;
@@ -333,8 +340,8 @@ height: 337px;
 .views_count{
 position: absolute;
 top: -250px;
-left: 0; 
-right: 0; 
+left: 52%; 
+transform: translateX(-50%);
 margin-inline: auto; 
 width: fit-content;
 font-weight: bold;
@@ -343,6 +350,31 @@ color: #0618C4;
 filter: drop-shadow(0px 13px 0px #94D1FF);
 
 }
+/* ////////////// */
+/* ////////////// */
+.plus {
+  position: relative;
+}
+
+.plus::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -100px;
+font-size: 9vw;
+}
+
+.odometer2.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer2.odometer-theme-minimal .odometer-digit .odometer-ribbon-inner {
+  -webkit-transition-duration: 2s !important;
+  -moz-transition-duration: 2s !important;
+  -ms-transition-duration: 2s !important;
+  -o-transition-duration: 2s !important;
+  transition-duration: 5s !important;
+}
+/* ////////////// */
+/* ////////////// */
 /* @media screen and (max-width: 1100px){
     .views_count{
         font-size: 70px !important;
@@ -350,13 +382,12 @@ filter: drop-shadow(0px 13px 0px #94D1FF);
 } */
 .views_text{
 position: absolute;
-top: 40px;
+bottom: 120px;
 left: 50%;
 transform: translateX(-50%);
 font-weight: bold;
 font-size: 50px;
 color: #2E3AAF;
-
 }
 @media screen and (max-width: 1100px){
     .views_text{
@@ -558,6 +589,12 @@ font-size: 41.1969px;
 line-height: 150%;
 text-align: center;
 color: #24557a80;
+text-decoration: none;
+border: none;
+letter-spacing: 0;
+word-spacing: 0;
+
+
 }
 
 @media screen and (max-width: 767px){
@@ -930,11 +967,11 @@ margin-top: 5px;
 }
 @media screen and (min-width: 1440px){
     .podcast_shorts_box .container{
-        width: 1000px;
+        width: 1300px;
     }
 }
 .podcast_shorts_box .container{
-    max-width: 1000px;
+    max-width: 1300px;
  }
 .podcast_shorts_main{
     margin: 0 auto;
@@ -1015,12 +1052,11 @@ text-align: right;
 }
 
 
-.otlb_khedmty{
+.otlb_khedmty {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
     font-weight: 800;
-    background-color: #0618C4;
     color: #ffffff;
     padding: 10px 40px;
     border-radius: 78px;
@@ -1028,7 +1064,27 @@ text-align: right;
     position: absolute;
     right: 80px;
     bottom: 70px;
+    background: linear-gradient(120deg, #262d5c, #ae9712, #262d5c);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position .3s;
+    animation: gradientAnimation 1s infinite alternate;
+
+}
+/* .otlb_khedmty:hover{
+    background: linear-gradient(120deg, #ae9712, #262d5c, #ae9712);
+    transition: 0.4s;
+} */
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
     }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
     .otlb_khedmty::before{
     content: "";
     position: absolute;
@@ -1037,12 +1093,16 @@ text-align: right;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid #C9E8FF;
+    border: 3px solid #C9E8FF;
     border-radius: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 8px;
     padding-left: 8px;
+    }
+    .otlb_khedmty:hover::before{
+        border: 3px solid #c4aa16;
+        transition: 0.4s;
     }
 /* ////////////////////////////////////////// */
 /* ////////////////////////////////////////// */
@@ -1054,11 +1114,11 @@ text-align: right;
 }
 @media screen and (min-width: 1440px){
     .other_services .container{
-        width: 1000px;
+        width: 1300px;
     }
 }
 .other_services .container{
-    max-width: 1000px;
+    max-width: 1300px;
  }
 
  .other_services_main_box{
@@ -1076,11 +1136,11 @@ text-align: right;
  }
 
  .left_two_boxes{
-    width: 48%;
+    width: 50%;
     height: 580px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    row-gap: 20px;
  }
  .first_box{
 position: relative;
@@ -1123,7 +1183,7 @@ border-radius: 18px;
  /* //////// */
  .whiteboard_img{
     position: absolute;
-    left: 15px;
+    right: 60px;
     top: -30px;
  }
  .Whiteboard_text{
@@ -1227,17 +1287,29 @@ padding: 0px 55px;
 padding-bottom: 5px;
 padding-left: 90px;
 position: relative;
+transition: 0.4s;
+
 }
 .contact_tringle{
 position: absolute;
-top: 50%;
-transform: translateY(-50%);
+/* top: 50%;
+transform: translateY(-50%); */
 right: -35px;
 width: 63px;
 height: 140%;
+transition: 0.6s;
+top: 0;
+bottom: 0;
+margin: auto 0;
+
 }
 
-
+.contact_btn:hover{
+    background: #86bce6;
+    }
+.contact_btn:hover .contact_tringle{
+    transform: rotate(360deg) ;
+}
 
 
 .youtube_btn{
@@ -1255,16 +1327,30 @@ padding: 0px 55px;
 padding-bottom: 5px;
 position: relative;
 margin-right: -45px;
+transition: 0.4s;
+
 }
 
 .youtube_tringle{
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  /* top: 50%;
+  transform: translateY(-50%); */
   left: -35px;
   width: 63px;
   height: 140%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transition: 0.6s;
+
   }
+
+  .youtube_btn:hover{
+    background: #e26466;
+    }
+.youtube_btn:hover .youtube_tringle{
+    transform: rotate(360deg) ;
+}
 
   /* //////////////////////////// */
 
