@@ -371,6 +371,20 @@ margin: 10px;
     background: #ffeaea;
     color: #ff3b3b;
   }
+  .main-header {
+    height: 80px; /* Height of header with burger only */
+    transition: height 0.3s;
+  }
+  .main-header.menu-open {
+    height: 270px; /* Height of header + menu (adjust as needed) */
+  }
+  .headline_and_image {
+    margin-top: 90px; /* Default header height */
+    transition: margin-top 0.3s;
+  }
+  body.menu-open .headline_and_image {
+    margin-top: 270px; /* Height of header + menu (match .main-header.menu-open) */
+  }
 }
 
 /* Optional: Animate hamburger icon to X when open */
