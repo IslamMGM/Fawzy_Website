@@ -293,12 +293,97 @@ margin: 10px;
 .m_nav {
   display: none;
   flex-direction: column;
-  background: #fff;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.98);
   position: absolute;
   top: 100%;
-  right: 0;
   left: 0;
+  right: 0;
+  min-height: 220px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 18px 18px;
   z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s, transform 0.3s;
+  padding: 24px 0 16px 0;
+  gap: 18px;
+}
+
+/* Show mobile nav when active, with animation */
+.m_nav.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Style mobile nav links */
+.m_nav li {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.m_nav .d_links,
+.m_nav .d_links_youtube {
+  display: block;
+  width: 80vw;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 16px 0;
+  font-size: 20px;
+  border-radius: 12px;
+  background: #e7f5ff;
+  color: #0618c4;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  margin-bottom: 10px;
+}
+
+.m_nav .d_links_youtube {
+  background: #ffeaea;
+  color: #ff3b3b;
+}
+
+.m_nav .d_links:hover,
+.m_nav .d_links_youtube:hover {
+  background: #c9e8ff;
+  color: #0c00b5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Remove the border and background from the original desktop style for mobile */
+@media (max-width: 900px) {
+  .m_nav .d_links,
+  .m_nav .d_links_youtube {
+    border: none;
+    background: #e7f5ff;
+    color: #0618c4;
+    font-size: 20px;
+    margin-left: 0;
+  }
+  .m_nav .d_links_youtube {
+    background: #ffeaea;
+    color: #ff3b3b;
+  }
+}
+
+/* Optional: Animate hamburger icon to X when open */
+.nav-toggle.open .hamburger {
+  background: transparent;
+}
+.nav-toggle.open .hamburger::before {
+  transform: rotate(45deg) translate(5px, 5px);
+  top: 0;
+}
+.nav-toggle.open .hamburger::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+  top: 0;
 }
 
 /* Hamburger styles */
@@ -348,9 +433,4 @@ margin: 10px;
     justify-content: space-between;
     align-items: center;
   }
-}
-
-/* Show mobile nav when active */
-.m_nav.active {
-  display: flex;
 }
