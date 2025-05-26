@@ -343,9 +343,6 @@ margin: 10px;
   .nav-toggle {
     display: block;
   }
-  .m_nav {
-    display: flex;
-  }
   .main-header .container {
     flex-direction: row;
     justify-content: space-between;
