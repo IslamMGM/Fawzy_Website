@@ -66,27 +66,96 @@
     <a id="to-top"></a>
     <header class="main-header">
       <div class="container">
-        <div class="logo">
+        <div class="logo_header">
           <a href="index.html">
-            <img src="images/logo_svg.svg" alt="" />
+            <img class="logo_img" src="images/logo_svg.svg" alt="" />
           </a>
         </div>
         <div class="nav">
           <ul class="d_nav">
+            <img class="play_header" src="images/play_red.svg" alt="" />
             <li>
-              <a class="d_links_youtube" id="link1" href=""
+              <!-- <a class="d_links_youtube" id="link1" href=""
                 >قناة اليوتيوب
-                <img class="play_header" src="images/play_red.svg" alt="" />
+              </a> -->
+              <a href="#" class="pixel_a_yo">
+                <button class="pixel-btn Pixel_yo">
+                  <span>قناة اليوتيوب</span>
+                  <div class="pixel-container" style="--pixel-color: #FF7174"></div>
+                </button>
               </a>
             </li>
             <li>
-              <a class="d_links" id="link2" href="">أعمالي</a>
+              <a href="#" class="pixel_a">
+                <button class="pixel-btn">
+                  <span>أعمالي</span>
+                  <div class="pixel-container" style="--pixel-color: #0C00B5"></div>
+                </button>
+              </a>
             </li>
             <li>
-              <a class="d_links" id="link6" href="">خدماتي</a>
+              <!-- <a class="d_links" id="link6" href="">خدماتي</a> -->
+              <a href="#" class="pixel_a">
+                <button class="pixel-btn">
+                  <span>خدماتي</span>
+                  <div class="pixel-container" style="--pixel-color: #0C00B5"></div>
+                </button>
+              </a>
             </li>
-            <li><a class="d_links" id="link4" href="">المدونة</a></li>
+            <li>
+              <!-- <a class="d_links" id="link4" href="">المدونة</a> -->
+              <a href="#" class="pixel_a">
+                <button class="pixel-btn">
+                  <span>المدونة</span>
+                  <div class="pixel-container" style="--pixel-color: #0C00B5"></div>
+                </button>
+              </a>
+            </li>
           </ul>
+            <label for="check" class="menuButton">
+            <input id="check" class="toogle" type="checkbox" />
+              <svg class="svg_burger" viewBox="0 0 32 32">
+              <path
+                class="line_burger line_top_bottom_burger"
+                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+              ></path>
+              <path class="line_burger" d="M7 16 27 16"></path>
+            </svg>
+            <!-- <span class="top"></span>
+            <span class="mid"></span>
+            <span class="bot"></span> -->
+          </label>
+          <ul class="m-nav">
+          <div class="m-nav-container">
+            <li class="m-lin">
+              <!-- <a class="m_links" href="#">أعمالي</a> -->
+                <a href="#" class="pixel_a_mobile">
+                <button class="pixel-btn_mobile m-links">
+                  <span>أعمالي</span>
+                  <div class="pixel-container_mobile" style="--pixel-color: #0C00B5"></div>
+                </button>
+                </a>
+            </li>
+            <li class="m-lin">
+              <!-- <a class="m_links" href="#">خدماتي</a> -->
+                <a href="#" class="pixel_a_mobile">
+                <button class="pixel-btn_mobile m-links">
+                  <span>خدماتي</span>
+                  <div class="pixel-container_mobile" style="--pixel-color: #0C00B5"></div>
+                </button>
+                </a>
+            </li>
+            <li class="m-lin">
+              <!-- <a class="m_links" href="#">المدونة</a> -->
+                <a href="#" class="pixel_a_mobile">
+                <button class="pixel-btn_mobile m-links">
+                  <span>المدونة</span>
+                  <div class="pixel-container_mobile" style="--pixel-color: #0C00B5"></div>
+                </button>
+                </a>
+            </li>
+          </div>
+        </ul>
         </div>
       </div>
     </header>
@@ -95,7 +164,7 @@
     <section class="headline_and_image">
       <section class="container">
         <div class="headline_and_image_box">
-          <div class="head_box">
+          <div class="head_box" data-aos="zoom-out" data-aos-offset="1">
             <h1 class="first_head">
               شريكك <br />
             </h1>
@@ -134,10 +203,16 @@
               و عمـــــلت مـــع العديد من المؤسسات الكبرى وصناع المحتوى في الوطن
               العربي والعالم
             </p>
-            <a class="contact_me" href=""> تواصل معي </a>
+            <!-- <a class="contact_me" href=""> تواصل معي </a> -->
+              <a href="#" class="pixel_a_contact">
+                <button class="pixel-btn_contact">
+                  <span>تواصل معي </span>
+                  <div class="pixel-container_contact" style="--pixel-color: #0618C4"></div>
+                </button>
+              </a>
           </div>
-          <div class="image_box">
-            <img src="images/fawzy.png" alt="" />
+          <div class="image_box" data-aos="zoom-in" data-aos-offset="1">
+            <img class="fawzy_img" src="images/fawzy.png" alt="" />
             <div class="circle"></div>
             <img class="big_right_arrow" src="images/big_arrow.svg" alt="" />
             <img
@@ -170,19 +245,16 @@
       <!-- /////////////////////////////////// -->
       <!-- /////////////////////////////////// -->
     <section class="views_number_section">
-      <img class="wave" src="images/wave.svg" alt="" />
-      <img class="wave_2" src="images/wave.svg" alt="" />
-      <div class="bg_container">
-        <div class="wave_box">
-          <img class="right_star" src="images/right_star.svg"></img>
+          <img class="wave" src="images/wave.svg" alt="" />
+          <img class="wave_2" src="images/wave.svg" alt="" />
+          <img class="wave_3" src="images/wave.svg" alt="" />
+          <img class="right_star" src="images/right_star_1.svg"></img>
           <img class="right_star_rocket" data-aos="fade-up" data-aos-offset="2" src="images/right_star_rocket.svg"></img>
-          <img class="left_star" src="images/left_star.svg"></img>
+          <img class="left_star" src="images/left_star_1.svg"></img>
           <img class="left_star_rocket" data-aos="fade-up" data-aos-offset="2" src="images/left_star_rocket.svg"></img>
           <!-- <span class="views_count">+ 100000000</span> -->
           <span class="views_count plus odometer2">0</span>
           <span class="views_text">إجمالي عدد المشاهدات</span>
-        </div>
-      </div>
     </section>
       <!-- /////////////////////////////////// -->
       <!-- /////////////////////////////////// -->
@@ -242,7 +314,7 @@
       <!-- /////////////////////////////////// -->
       <div class="vd_number_box">
         <div class="container">
-          <div class="vd_main_box">
+          <div class="vd_main_box" data-aos="zoom-out" data-aos-offset="1">
             <p class="vd_number_text">أنتجت بحــــــمد الله رب العالمين مايزيد عن ألف فيــــــــــــــديو</p>
             <div class="vd_sub_box">
               <span class="videos_number">+1000</span>
@@ -256,7 +328,7 @@
       <div class="omla_dowl">
         <div class="container">
           <div class="omla_dowl_box">
-            <div class="omla_box">
+            <div class="omla_box" data-aos="zoom-in" data-aos-offset="1">
               <p class="omla_text" >
                 أكثر من 30 عميل حــــــــول العــــــــــــــــــالم
               </p>
@@ -264,10 +336,10 @@
                 <span class="omla_count">+30</span>
               </div>
               <div class="omala_eub_left_box">
-                <span class="ameel_label">عميــــــــــــل</span>
+                <span class="ameel_label">عميــــل</span>
               </div>
             </div>
-            <div class="dowl_box">
+            <div class="dowl_box" data-aos="zoom-in" data-aos-offset="1">
               <p class="dowl_text" >
                 الإمارات، الســــــعودية،  مصـــــــــــــــر، إنجـــــــــــــــلترا،  الكـــــويت،  أمريكـــــــا</p>
               <div class="dowl_eub_right_box"></div>
@@ -287,7 +359,7 @@
             <h2 class="omlaay_head">أبـــرز عمـــــــلائي</h2>
             <h3 class="omlaay_sub_head">
               <span class="emoj_hand">
-                <img src="images/emoj_hand.svg" alt="">
+                <img class="emoj_hand_img" src="images/emoj_hand.svg" alt="">
               </span>
               المؤسســات وصناع المحتوى
             </h3>
@@ -295,6 +367,8 @@
           </div>
         </div>
       </section>
+      <!-- ///////////////////////////////////////// -->
+      <!-- ///////////////////////////////////////// -->
       <div class="omlaay_box">
         <div class="omlaay_net_background"></div>
       </div>
@@ -403,6 +477,8 @@
           </div>
         </div>
       </div>
+      <!-- ///////////////////////////////////////////////////// -->
+      <!-- ///////////////////////////////////////////////////// -->
       <div class="all_omlaa_logos_box_left">
         <div class="logos_carousel_left" aria-live="polite" aria-label="Image Carousel">
           <div class="logos_carousel-track_left">
@@ -540,16 +616,16 @@
        <section class="other_services">
         <div class="container">
           <div class="other_services_main_box">
-            <div class="right_big_box" data-aos="fade-left" data-aos-offset="1">
+            <div class="right_big_box" data-aos="zoom-in" data-aos-offset="1">
               <img class="whiteboard_img" src="images/whiteboard.svg" alt="">
               <p class="Whiteboard_text" >Whiteboard <br> Animation</p>
             </div>
-            <div class="left_two_boxes" data-aos="fade-right" data-aos-offset="1">
-              <div class="first_box">
+            <div class="left_two_boxes" >
+              <div class="first_box" data-aos="fade-up" data-aos-offset="1">
                 <img class="play" src="images/play.svg" alt="">
                 <p class="Collage" >Collage <br> Art Animation</p>
               </div>
-              <div class="second_box">
+              <div class="second_box" data-aos="fade-down" data-aos-offset="1">
                 <img class="clacket_light" src="images/clacket_light.svg" alt="">
                 <img class="clacket_solid" src="images/clacket_solid.svg" alt="">
                 <p class="clacket_text" >YouTube <br> Videos Editing</p>
@@ -580,11 +656,13 @@
             <h2 class="modaona_head">المدونة</h2>
             <img class="modaona_shape" src="images/modaona_shape.svg" alt="">
             <span class="modaona_pen">
-              <img src="images/modaona_pen.svg " alt="">
+              <img class="modaona_pen_img" src="images/modaona_pen.svg " alt="">
             </span>
           </div>
         </div>
       </section>
+      <!-- ////////////////////////////////////// -->
+      <!-- ////////////////////////////////////// -->
       <section class="modaona_container">
         <div class="container">
           <div class="modaona_boxes">
@@ -619,21 +697,22 @@
       </section>
       <!-- /////////////////////////////////// -->
       <!-- /////////////////////////////////// -->
+<!-- <div class="none" style="display: none;"> -->
        <footer class="main_footer">
         <div class="container">
           <div class="main_footer_box">
-            <div class="logo_text">
-              <img class="logo_img" src="images/footer_logo.svg" alt="">
+            <div class="logo_text flex_view">
+              <img class="logo_footer" src="images/footer_logo.svg" alt="">
               <p class="logo_paragraph">
                 محرر فيديو محترف بخبرة تزيد عن 5 سنوات في مجال إنتــــــــــــاج المحتــــــــوى المـــــــــــرئي والمــــونتاج و عمـــــــــلت مــــــــع العديد من المؤسسات الكبرى وصناع المحتوى في الوطن العربي والعالم
               </p>
             </div>
-            <div class="links">
+            <div class="links flex_view">
               <a class="footer_link" href="">المـــــــــــــــــــدونــــــة</a>
               <a class="footer_link" href="">خدمــــــــــــــــــــاتي</a>
               <a class="footer_link" href="">أعمـــــــــــــــــــــــالي</a>
             </div>
-            <div class="email_register">
+            <div class="email_register flex_view">
               <h4 class="register_head">سجل الآن</h4>
               <div class="register_input_container">
                 <input class="register_input" id="blink_cursor_email_register" placeholder="none" required type="email">
@@ -655,6 +734,8 @@
           </div>
         </div>
        </footer>
+       <!-- none -->
+<!-- </div>         -->
     <!-- animate on scroll -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

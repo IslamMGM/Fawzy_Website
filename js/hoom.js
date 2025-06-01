@@ -256,3 +256,39 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 // /////////////////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////
+///////////// pixel for contact /////////////////
+let buttons_contact = document.querySelectorAll(".pixel-btn_contact");
+buttons_contact.forEach((button_contact) => {
+  let pixelContainer_contact = button_contact.querySelector(
+    ".pixel-container_contact"
+  );
+  let pixSize_contact = 10;
+  let btnWidth_contact = button_contact.offsetWidth;
+  let btnheight_contact = button_contact.offsetHeight;
+
+  let cols_contact = Math.floor(btnWidth_contact / pixSize_contact);
+  let rows_contact = Math.floor(btnheight_contact / pixSize_contact);
+
+  for (let row_contact = 0; row_contact < rows_contact; row_contact++) {
+    for (let col_contact = 0; col_contact < cols_contact; col_contact++) {
+      let pixel_contact = document.createElement("div");
+      pixel_contact.classList.add("pixel_contact");
+      pixel_contact.style.left = `${col_contact * pixSize_contact}px`;
+      pixel_contact.style.top = `${row_contact * pixSize_contact}px`;
+
+      let delay_contact = Math.random() * 0.5;
+      pixel_contact.style.transitionDelay = `${delay_contact}s`;
+
+      let tx_contact = (Math.random() - 0.5) * 30;
+      let ty_contact = (Math.random() - 0.5) * 30;
+
+      pixel_contact.style.setProperty(`--tx`, `${tx_contact}px`);
+      pixel_contact.style.setProperty(`--ty`, `${ty_contact}px`);
+
+      pixelContainer_contact.appendChild(pixel_contact);
+    }
+  }
+});
