@@ -646,7 +646,7 @@ input[type = "checkbox"] {
 /* /// */
 #to-top {
     display: inline-block;
-    background-color: #616CB5;
+    background-color:#3a416e;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -665,16 +665,16 @@ input[type = "checkbox"] {
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
     color: #fff;
+              font-size: 1.6em;
+        line-height: 55px;
   }
   #to-top:hover {
     cursor: pointer;
-    background-color: #3a416e;
+    background-color: #2a2f50;
   }
   #to-top:active {
-    background-color: #3a416e;
+    background-color: #2a2f50;
   }
   #to-top.show {
     opacity: 1;
@@ -685,15 +685,15 @@ input[type = "checkbox"] {
   @media screen and (max-width:767px){
     #to-top {
  
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
         bottom: 15px;
         right: 15px;
  
       }
       #to-top::after {
-          font-size: 1.2em;
-        line-height: 37px;
+          font-size: 1.4em;
+        line-height: 50px;
  
       }
   }
