@@ -484,9 +484,9 @@ direction: rtl;
     align-items: flex-start;
 }
 .head_box{
-    width: 80%;
+    width: 100%;
     margin-top: 80px;
-    margin-right: 20px !important;
+    margin-right: 0px !important;
 }
 .first_head{
 font-family: "fawzy";
@@ -495,13 +495,16 @@ color: #0C00B5;
     transform: rotate(-7deg);
     font-weight: 400;
     z-index: -1;
-    margin-right: 110px;
+    width: fit-content;
+    margin: 0 auto;
 }
 .ract_ibda3y_box{
    position: relative;
    margin-top: -20px;
    z-index: -5;
    width: fit-content;
+  margin: 0 auto;
+
    }
 
    .ract_ibda3y_image{
@@ -714,12 +717,14 @@ direction: rtl;
 }
 .first_head{
     font-size: 70px;
-    margin-right: 60px;
+       width: fit-content;
+  margin: 0 auto;
   }
 .ract_ibda3y_box{
    margin-top: -27px;
    z-index: -5;
    width: fit-content;
+  margin: 0 auto;
    }
    .ract_ibda3y_image{
     width: 380px;
@@ -840,13 +845,14 @@ direction: rtl;
 }
 .first_head{
     font-size: 50px;
-    margin-right: 60px;
-    margin-bottom: 20px;
+   width: fit-content;
+  margin: 0 auto;
   }
 .ract_ibda3y_box{
    margin-top: -27px;
    z-index: -5;
    width: fit-content;
+  margin: 0 auto;
    }
    .ract_ibda3y_image{
     width: 330px;
@@ -1033,17 +1039,21 @@ direction: rtl;
 .head_box{
     width: 100%;
     margin-top: 90px;
-    margin-right: 20px !important;
+   width: fit-content;
+  margin: 0 auto;
 }
 .first_head{
     font-size: 40px;
-    margin-right: 50px;
-    margin-bottom: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
   }
 .ract_ibda3y_box{
    margin-top: -20px;
    z-index: -5;
-   width: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    /* margin-top: 50px; */
    }
    .ract_ibda3y_image{
     width: 250px;
