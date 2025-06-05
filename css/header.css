@@ -517,19 +517,27 @@ input[type = "checkbox"] {
 }
 /* ////////////////////*/
 @media screen and (max-width: 767px){
-        .d_nav{
-        margin-top: 8px;
+  .main-header .container{
+    height: 120px;
+  }
+  .d_nav{
         margin-left: 60px;
+        margin-top: -6px;
+      }
+      .logo_header{ 
+            margin-top: 0px;
+          } 
+          
+        .menuButton{
+        display: flex;
+        top: 32px;
+        left: 20px;
         }
-        .pixel-btn{
+      .pixel-btn{
             display: none;
-        }
+          }
         .pixel_a::before{
         display: none;
-    }
-
-    .d_nav{
-        margin-top: 13px;
     }
         .d_nav::before{
         height: 45%;
@@ -550,18 +558,9 @@ input[type = "checkbox"] {
         font-size: 14px;
       }
 
-      .logo_header{ 
-            margin-top: 14px;
-         } 
         .play_header{
         width: 32px;
         height: 38px;
-        }
-
-        .menuButton{
-        display: flex;
-        top: 55px;
-        left: 20px;
         }
 }
 /* ********************************************** */
@@ -603,30 +602,36 @@ input[type = "checkbox"] {
     .pixel_a_yo span{
     font-size: 13px !important;
   }
-      .logo_header{ 
-            margin-top: -10px;
-         } 
-         .logo_header{
-            width: 75px !important;
-            height: 45px !important;
-         }
-        .play_header{
+
+
+      .play_header{
         width: 27px;
         height: 33px;
         left: -5px;
-        }
-
+      }
+      .main-header .container{
+        height: 120px;
+      }
+     .d_nav{
+        margin-left: 50px;
+        margin-top: -10px;
+      }
+      .logo_header{ 
+            margin-top: 00px;
+          } 
+      .logo_img{
+        width: 86px !important;
+        height: 54px !important;
+         }
+          
         .menuButton{
         display: flex;
-        top: 55px;
-        left: 15px;
+        top: 32px;
+        left: 20px;
+        width: 2.8em;
+        height: 2.8em;
+        border-radius: 0.5em;
         }
-
-.menuButton {
-     width: 2.6em;
-    height: 2.6em;
-    border-radius: 0.5em;
-}
 
 input[type = "checkbox"] {
   position: absolute;
