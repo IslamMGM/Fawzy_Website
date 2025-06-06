@@ -221,7 +221,7 @@ padding-left: 30px;
         width: 11px;
         height: 11px;
         background-color: var(--pixel-color);
-        transition: transform 0.5s ease, opacity 0.5s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
         border-radius: 0px; /* Soften pixel edges */
       }
 
@@ -285,7 +285,7 @@ padding-left: 30px;
         width: 11px;
         height: 11px;
         background-color: var(--pixel-color);
-        transition: transform 0.5s ease, opacity 0.5s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
         border-radius: 0px; /* Soften pixel edges */
       }
 
@@ -407,7 +407,7 @@ input[type = "checkbox"] {
     position: absolute;
     overflow: hidden;
     background-color: #C9E8FF;
-    top: 153px;
+    top: 120px;
     right: 0;
     width: 100%;
     height: 0;

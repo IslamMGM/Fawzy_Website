@@ -3443,14 +3443,15 @@ margin-top: -55px;
                       linear-gradient(90deg, hsla(206, 100%, 79%, 0.5) 1px, transparent 1px);
     background-size: 25px 25px; 
     z-index: -1;
+    display: none;
   }
  /*//////////////////////////////////////////////////  */
 
 /* Animation_omlaa_logo */
 :root {
     --gap-width_logos: 150px;
-    --slide-width_logos: 180px;
-    --slide-height_logos: 180px;
+    --slide-width_logos: 300px;
+    --slide-height_logos: 100px;
      --scroll-duration_logos: 25s;  
     --total-slides_logos: 8;  
     --total-width_logos: calc(
@@ -3464,7 +3465,7 @@ margin-top: -55px;
     overflow: hidden;
     width: 100%;
     position: absolute;
-    top: -560px;
+    top: -620px;
   }
 
   .logos_carousel-track {
@@ -3506,13 +3507,44 @@ margin-top: -55px;
   bottom: -10px;
 }
 
-  .logos_img{
+  .logos_img_comp{
+    filter: grayscale(100%);
     width: 100%;
     height: 100%;
-    border: 3px solid #1c198170;
-    /* padding: 10px; */
-    border-radius: 10px;
-    /* background-color: #c3bae9; */
+  }
+  .akhdar_img{
+    width: 250px;
+    height: 85px;
+  }
+  .ethad_img{
+    width: 300px;
+    height: 300px;
+  }
+  .KimCam_img{
+    width: 250px;
+    height: 153px;
+    filter: invert(60%) ;
+  }
+  .Soor_img{
+    width: 250px;
+    height: 73px;
+    filter: invert(50%);
+  }
+  .gahezia_img{
+    width: 300px;
+    height: 96px;
+  }
+  .had_img{
+    width: 300px;
+    height: 83px;
+  }
+  .qasem_img{
+    width: 300px;
+    height: 89px;
+  }
+  .shorta_img{
+    width: 220px;
+    height: 224px;
 
   }
   /* .logos_slide:hover{
@@ -3537,8 +3569,8 @@ margin-top: -55px;
 /* Animation_omlaa_logo left */
 :root {
     --gap-width_logos_left: 150px;
-    --slide-width_logos_left: 180px;
-    --slide-height_logos_left: 180px;
+    --slide-width_logos_left: 200px;
+    --slide-height_logos_left: 200px;
      --scroll-duration_logos_left: 25s;  
     --total-slides_logos_left: 9;  
     --total-width_logos_left: calc(
@@ -3552,7 +3584,7 @@ margin-top: -55px;
     overflow: hidden;
     width: 100%;
     position: absolute;
-    top: -320px;
+    top: -280px;
   }
 
   .logos_carousel-track_left {
@@ -3597,11 +3629,8 @@ margin-top: -55px;
   .logos_img{
     width: 100%;
     height: 100%;
-    border: 3px solid #1c198170;
-    /* padding: 10px; */
-    border-radius: 10px;
-    /* background-color: #c3bae9; */
-
+    border: 3px solid #0618C4;
+    border-radius: 50%;
   }
   /* .logos_slide_left:hover{
     transform: translateY(-10px);
