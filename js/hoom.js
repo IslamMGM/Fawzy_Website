@@ -58,6 +58,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         animateOdometer();
+        observer.unobserve(entry.target); // Stop observing after first trigger
       }
     });
   },
