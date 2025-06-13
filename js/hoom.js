@@ -38,40 +38,69 @@
 //   }
 // });
 // Initialize Odometer
-var odometer2 = new Odometer({
-  el: document.querySelector(".odometer2"),
-  value: 0, // Start value
-  theme: "minimal",
-});
+const odometerElement = document.querySelector(".odometer2");
 
-// Function to reset and animate the odometer
-function animateOdometer() {
-  odometer2.update(0); // Reset to initial value
-  setTimeout(() => {
-    odometer2.update(100000000); // Animate to final value
-  }, 50); // Small delay to allow reset to complete
+function animateCountUp(target, duration) {
+  const start = 0;
+  const startTime = performance.now();
+  const range = target;
+
+  let slowTailStarted = false;
+  let tailStartValue = 0;
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    let displayValue;
+
+    if (progress < 0.97) {
+      // Fast initial animation with expo easing
+      const easedProgress = 1 - Math.pow(2, -10 * progress);
+      displayValue = Math.floor(easedProgress * range);
+      tailStartValue = displayValue;
+    } else {
+      // Slow-motion tail: last few values
+      if (!slowTailStarted) slowTailStarted = currentTime;
+
+      const tailProgress = Math.min((currentTime - slowTailStarted) / 700, 500); // 1 second tail
+      const easedTail = tailProgress * tailProgress; // very slow quadratic easing
+      displayValue = Math.floor(
+        tailStartValue + (target - tailStartValue) * easedTail
+      );
+    }
+
+    odometerElement.textContent = displayValue.toLocaleString();
+
+    if (displayValue < target) {
+      requestAnimationFrame(update);
+    } else {
+      odometerElement.textContent = target.toLocaleString(); // final fix
+    }
+  }
+
+  requestAnimationFrame(update);
 }
 
-// Set up Intersection Observer
+// Intersection Observer
 const observer = new IntersectionObserver(
-  (entries) => {
+  (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        animateOdometer();
-        observer.unobserve(entry.target); // Stop observing after first trigger
+        animateCountUp(100000000, 1000); // 2 seconds duration
+        observer.unobserve(entry.target);
       }
     });
   },
   {
-    threshold: 0.5, // Trigger when at least 50% of the element is visible
+    threshold: 0.9,
   }
 );
 
-// Observe the odometer element
-const odometerElement = document.querySelector(".odometer2");
 if (odometerElement) {
   observer.observe(odometerElement);
 }
+
 // /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 ////////// number animation for videos count/////////////
@@ -200,21 +229,21 @@ function omlaAnimateCount(omlaElement) {
 }
 // /////////////////////////////////////////////////////////////////////////////////////////
 // ///////// pause the videos slider when hovering any slide /////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", () => {
-  const carouselTrack = document.querySelector(".carousel-track");
-  const slides = document.querySelectorAll(".slide");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const carouselTrack = document.querySelector(".carousel-track");
+//   const slides = document.querySelectorAll(".slide");
 
-  // Pause on hover for individual slides
-  slides.forEach((slide) => {
-    slide.addEventListener("mouseenter", () => {
-      carouselTrack.style.animationPlayState = "paused";
-    });
+//   // Pause on hover for individual slides
+//   slides.forEach((slide) => {
+//     slide.addEventListener("mouseenter", () => {
+//       carouselTrack.style.animationPlayState = "paused";
+//     });
 
-    slide.addEventListener("mouseleave", () => {
-      carouselTrack.style.animationPlayState = "running";
-    });
-  });
-});
+//     slide.addEventListener("mouseleave", () => {
+//       carouselTrack.style.animationPlayState = "running";
+//     });
+//   });
+// });
 // /////////////////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////
