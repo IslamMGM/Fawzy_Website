@@ -1353,7 +1353,7 @@ filter: drop-shadow(0px 13px 0px #94D1FF);
 .odometer2 {
   text-align: center;
   display: inline-block;
-
+    letter-spacing: 2px;
 }
 @media (min-width: 1550px){
 .odometer2 {
@@ -1436,7 +1436,7 @@ height: 284px;
  }
 
 .views_count{
-top: -80px;
+top: -90px;
 left: 52%; 
 transform: translateX(-50%);
 font-size: 130px;
@@ -1622,7 +1622,7 @@ left: 20px;
 /* ********************************************************** */
 @media (min-width: 900px) and (max-width: 1000px){
   .views_count{
-top: -40px;
+top: -60px;
 left: 52%; 
 transform: translateX(-50%);
 font-size: 75px;
@@ -1738,7 +1738,7 @@ height: 142px;
 /* *************************** */
 @media (min-width: 600px) and (max-width: 700px){
     .views_count{
-top: -20px;
+top: -40px;
 left: 52%; 
 transform: translateX(-50%);
 font-size: 43px;
@@ -1789,7 +1789,7 @@ font-size: 24px;
 top: -35px;
 left: 52%; 
 transform: translateX(-50%);
-font-size: 38px;
+font-size: 36px;
 filter: drop-shadow(0px 4px 0px #94D1FF);
 
 }
@@ -1798,7 +1798,7 @@ filter: drop-shadow(0px 4px 0px #94D1FF);
   top: 50%;
   transform: translateY(-50%);
   left: -25px;
-font-size: 38px;
+font-size: 36px;
 }
 .views_text{
 bottom: -5px;
@@ -1851,19 +1851,23 @@ height: 115px;
 
 @media (min-width: 400px) and (max-width: 500px){
       .views_count{
-top: -15px;
+top: -25px;
 left: 52%; 
 transform: translateX(-50%);
-font-size: 34px;
+font-size: 31px;
 filter: drop-shadow(0px 4px 0px #94D1FF);
 
+}
+.odometer2 {
+
+    letter-spacing: 0px;
 }
 
 .plus::after {
   top: 50%;
   transform: translateY(-50%);
   left: -20px;
-font-size: 34px;
+font-size: 31px;
 }
 .views_text{
 bottom: -20px;
@@ -1911,19 +1915,23 @@ height: 100px;
 }
 @media (max-width: 400px){
       .views_count{
-top: -15px;
+top: -25px;
 left: 52%; 
 transform: translateX(-50%);
-font-size: 30px;
+font-size: 26px;
 filter: drop-shadow(0px 4px 0px #94D1FF);
 
+}
+.odometer2 {
+
+    letter-spacing: 0px;
 }
 
 .plus::after {
   top: 50%;
   transform: translateY(-50%);
   left: -20px;
-font-size: 30px;
+font-size: 26px;
 }
 .views_text{
 bottom: -10px;
@@ -3412,8 +3420,8 @@ margin-top: -55px;
 
 /* Animation_omlaa_logo */
 :root {
-    --gap-width_logos: 150px;
-    --slide-width_logos: 300px;
+    --gap-width_logos: 84px;
+    --slide-width_logos: 100px;
     --slide-height_logos: 100px;
      --scroll-duration_logos: 25s;  
     --total-slides_logos: 8;  
@@ -3437,6 +3445,8 @@ margin-top: -55px;
         position: relative;
         animation: none;
         will-change: transform;
+          white-space: nowrap;
+
   }
 
   .logos_slide {
@@ -3479,8 +3489,8 @@ margin-top: -55px;
     height: 85px;
   }
   .ethad_img{
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
   .KimCam_img{
     width: 250px;
@@ -3493,16 +3503,16 @@ margin-top: -55px;
     filter: invert(50%);
   }
   .gahezia_img{
-    width: 300px;
-    height: 96px;
+    width: 380px;
+    height: 121px;
   }
   .had_img{
-    width: 300px;
-    height: 83px;
+    width: 420px;
+    height: 117px;
   }
   .qasem_img{
-    width: 300px;
-    height: 89px;
+    width: 360px;
+    height: 107px;
   }
   .shorta_img{
     width: 180px;
@@ -3677,8 +3687,8 @@ margin-top: -55px;
   }
   :root {
     --gap-width_logos_left: 60px;
-    --slide-width_logos_left: 120px;
-    --slide-height_logos_left: 120px;
+    --slide-width_logos_left: 180px;
+    --slide-height_logos_left: 180px;
   }
 }
 

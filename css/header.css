@@ -524,8 +524,9 @@ input[type = "checkbox"] {
         margin-left: 60px;
         margin-top: -6px;
       }
-      .logo_header{ 
+        .logo_header{ 
             margin-top: 0px;
+            margin-right: -25px !important;
           } 
           
         .menuButton{
@@ -617,11 +618,11 @@ input[type = "checkbox"] {
         margin-top: -10px;
       }
       .logo_header{ 
-            margin-top: 00px;
+            margin-top: 8px;
           } 
       .logo_img{
-        width: 86px !important;
-        height: 54px !important;
+        width: 68px !important;
+        height: 47px !important;
          }
           
         .menuButton{

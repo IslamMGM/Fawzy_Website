@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(scrollLoop);
   }
 
-  //////////////////////////// Pause on hover//////////////////////
-  /////////////////////////////////////////////////////////////
+  // Pause on hover////
   //   track.parentElement.addEventListener("mouseenter", () => (paused = true));
   //   track.parentElement.addEventListener("mouseleave", () => (paused = false));
   document.querySelectorAll(".slide").forEach((slide) => {
@@ -56,9 +55,20 @@ document.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(scrollLoop);
 
   // Intersection Observer to pause/play videos
+  // Set threshold based on screen width
+  let thresholdValue;
+
+  if (window.innerWidth <= 768) {
+    // Mobile view (you can adjust the width value)
+    thresholdValue = 0.3;
+  } else {
+    // Desktop view
+    thresholdValue = 0.7;
+  }
+
   const observerOptions = {
     root: null,
-    threshold: 0.7,
+    threshold: thresholdValue,
   };
 
   const observer = new IntersectionObserver((entries) => {
