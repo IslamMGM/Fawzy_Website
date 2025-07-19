@@ -97,7 +97,7 @@ html {
 .d_nav::before{
 content: "";
 position: absolute;
-height: 68.5%;
+height: 102%;
 width: 103%;
 left: 53%;
 top: 50%;
@@ -111,8 +111,8 @@ padding-left: 30px;
 }
 .play_header{
     position: absolute;
-    left: -18px;
-    top: 0px;
+    left: -25px;
+    top: -3px;
     transition: 0.6s;
     z-index: 1000;
     width: 40px;
@@ -125,7 +125,77 @@ padding-left: 30px;
 
 /* //////////////////////////////////////////////// */
 /* //////////////////////////////////////////////// */
-      .pixel_a_yo{
+
+.d_links_youtube{
+    text-decoration: none;
+    font-size: 14px;
+    font-size: 16px;
+    position: relative;
+    font-weight: 800;
+    overflow: hidden;
+    padding:10px 30px ;
+    border-radius: 40px;
+    margin-left: 15px;
+    color: #ffffff;
+    background-color: #FF7174;
+    border: 2px solid #FF0000;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: 0.4s;
+
+}
+
+.d_links_youtube:hover{
+    color: #FF0000;
+    background-color: #C9E8FF;
+ 
+}
+
+.d_links{
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+    font-weight: 800;
+    overflow: hidden;
+    padding:10px 30px ;
+    border-radius: 40px;
+    margin-left: 15px;
+    margin-left: 50px;
+    color: #ffffff;
+    background-color: #0C00B5;
+    cursor: pointer;
+    text-wrap: nowrap;
+        border: 2px solid #0C00B5;
+    transition-duration: 0.3s;
+}
+
+.d_links:hover{
+    color: #0C00B5;
+    background-color: #C9E8FF;
+    border: 2px solid #0C00B5;
+        transition-duration: 0.3s;
+
+}
+
+.d_links::before{
+position: absolute;
+content: "";
+width: 100%;
+height: 136%;
+left: -35px;
+top: -10px;
+padding-top: 0px;
+padding-bottom: 0px;
+border: 2px solid #ffffff;
+border-radius: 40px 0 0 40px;  
+border-right: 0; 
+border-bottom-width: 2px;
+border-top-width: 2px;
+/* margin: 10px; */
+}
+/* //////////////////////////////////////////////// */
+/* //////////////////////////////////////////////// */
+      /* .pixel_a_yo{
         text-decoration: none !important;
         outline: none !important;
       }
@@ -155,7 +225,6 @@ padding-left: 30px;
         height: 50px;
         display: inline;
         margin-left: 30px;
-        /* padding: 12px 30px ; */
         background: transparent;
         color: #fff;
         font-size: 17px;
@@ -163,7 +232,7 @@ padding-left: 30px;
         cursor: pointer;
         border: 0;
         border: 2px solid transparent;
-        border-radius: 40px; /* Rounded corners */
+        border-radius: 40px;
         overflow: hidden;
         text-decoration: none !important;
         outline: none !important;
@@ -185,7 +254,7 @@ padding-left: 30px;
         cursor: pointer;
         border: 0;
         border: 2px solid #FF0000;
-        border-radius: 40px; /* Rounded corners */
+        border-radius: 40px; 
         overflow: hidden;
         text-decoration: none !important;
         outline: none !important;
@@ -213,7 +282,7 @@ padding-left: 30px;
         height: 100%;
         z-index: 1;
         pointer-events: none;
-        border-radius: inherit; /* Crucial for rounded mask */
+        border-radius: inherit;
       }
 
       .pixel-container .pixel {
@@ -222,16 +291,16 @@ padding-left: 30px;
         height: 11px;
         background-color: var(--pixel-color);
         transition: transform 0.3s ease, opacity 0.3s ease;
-        border-radius: 0px; /* Soften pixel edges */
+        border-radius: 0px; 
       }
 
       .pixel-btn:hover .pixel {
         opacity: 0;
         transform: translate(var(--tx), var(--ty));
-      }
+      } */
 /* //////////////////////////////////////////////// */
 /* ////////////// pixel for mobile ////////////////*/
-      .pixel_a_mobile{
+      /* .pixel_a_mobile{
         text-decoration: none !important;
         outline: none !important;
         position: relative;
@@ -242,7 +311,6 @@ padding-left: 30px;
         height: 50px;
         display: inline;
         margin-left: 30px;
-        /* padding: 12px 30px ; */
         background: transparent;
         color: #fff;
         font-size: 17px;
@@ -250,7 +318,7 @@ padding-left: 30px;
         cursor: pointer;
         border: 0;
         border: 2px solid transparent;
-        border-radius: 40px; /* Rounded corners */
+        border-radius: 40px;
         overflow: hidden;
         text-decoration: none !important;
         outline: none !important;
@@ -277,7 +345,7 @@ padding-left: 30px;
         height: 100%;
         z-index: 1;
         pointer-events: none;
-        border-radius: inherit; /* Crucial for rounded mask */
+        border-radius: inherit;
       }
 
       .pixel-container_mobile .pixel_mobile {
@@ -286,13 +354,13 @@ padding-left: 30px;
         height: 11px;
         background-color: var(--pixel-color);
         transition: transform 0.3s ease, opacity 0.3s ease;
-        border-radius: 0px; /* Soften pixel edges */
+        border-radius: 0px;
       }
 
       .pixel-btn_mobile:hover .pixel_mobile {
         opacity: 0;
         transform: translate(var(--tx), var(--ty));
-      }
+      } */
 /* //////////////////////////////////////////////// */
 /* //////////////////////////////////////////////// */
 /* .tringle_container{

@@ -73,43 +73,44 @@
         </div>
         <div class="nav">
           <ul class="d_nav">
-            <img class="play_header" src="images/play_red.svg" alt="" />
             <li>
-              <!-- <a class="d_links_youtube" id="link1" href=""
-                >قناة اليوتيوب
-              </a> -->
-              <a href="#" class="pixel_a_yo">
+              <a class="d_links_youtube" id="link1" href=""
+              >قناة اليوتيوب
+              <img class="play_header" src="images/play_red.svg" alt="" />
+            </a>
+              <!-- <a href="#" class="pixel_a_yo">
                 <button class="pixel-btn Pixel_yo">
                   <span>قناة اليوتيوب</span>
                   <div class="pixel-container" style="--pixel-color: #FF7174"></div>
                 </button>
-              </a>
+              </a> -->
             </li>
             <li>
-              <a href="#" class="pixel_a">
+              <a class="d_links" id="link6" href="">خدماتي</a>              
+              <!-- <a href="#" class="pixel_a">
                 <button class="pixel-btn">
                   <span>أعمالي</span>
                   <div class="pixel-container" style="--pixel-color: #0C00B5"></div>
                 </button>
-              </a>
+              </a> -->
             </li>
             <li>
-              <!-- <a class="d_links" id="link6" href="">خدماتي</a> -->
-              <a href="#" class="pixel_a">
+              <a class="d_links" id="link6" href="">خدماتي</a>
+              <!-- <a href="#" class="pixel_a">
                 <button class="pixel-btn">
                   <span>خدماتي</span>
                   <div class="pixel-container" style="--pixel-color: #0C00B5"></div>
                 </button>
-              </a>
+              </a> -->
             </li>
             <li>
-              <!-- <a class="d_links" id="link4" href="">المدونة</a> -->
-              <a href="#" class="pixel_a">
+              <a class="d_links" id="link4" href="">المدونة</a>
+              <!-- <a href="#" class="pixel_a">
                 <button class="pixel-btn">
                   <span>المدونة</span>
                   <div class="pixel-container" style="--pixel-color: #0C00B5"></div>
                 </button>
-              </a>
+              </a> -->
             </li>
           </ul>
             <label for="check" class="menuButton">
@@ -203,13 +204,13 @@
               و عمـــــلت مـــع العديد من المؤسسات الكبرى وصناع المحتوى في الوطن
               العربي والعالم
             </p>
-            <!-- <a class="contact_me" href=""> تواصل معي </a> -->
-              <a href="#" class="pixel_a_contact">
+            <a class="contact_me" href=""> تواصل معي </a>
+              <!-- <a href="#" class="pixel_a_contact">
                 <button class="pixel-btn_contact">
                   <span>تواصل معي </span>
                   <div class="pixel-container_contact" style="--pixel-color: #0618C4"></div>
                 </button>
-              </a>
+              </a> -->
           </div>
           <div class="image_box" data-aos="fade-down" data-aos-offset="1">
             <img class="fawzy_img" src="images/fawzy.png" alt="" />
@@ -268,72 +269,86 @@
       </div>
     </section>
       <!-- /////////////////////////////////// -->
-      <!-- /////////////////////////////////// -->
-      <div class="a3maly_videos_box">
-        <div class="net_background"></div>
-      </div>
-      <div class="all_video_box">
-        <div class="carousel" aria-live="polite" aria-label="Image Carousel">
-          <div class="carousel-track">
-            <!-- Original Slides -->
-          <div class="slide" data-vimeo="856059117">
+    <!-- Overlay for clicking outside -->
+    <div class="overlay_video_slider" id="overlay_video_slider"></div>
+    <div class="a3maly_videos_box_video_slider">
+      <div class="net_background_video_slider"></div>
+    </div>
+    <div class="all_video_box_video_slider">
+      <div
+        class="carousel_video_slider"
+        aria-live="polite"
+        aria-label="Video Carousel"
+      >
+        <!-- Track 1: Contains the original set of slides -->
+        <div
+          class="carousel-track_video_slider"
+          id="original-video-track_video_slider"
+        >
+          <div class="slide_video_slider" data-vimeo="856059117">
             <video
-              class="video_thumbnail"
+              class="video_thumbnail_video_slider"
               loop
               muted
               playsinline
-              preload="metadata"
+              preload="auto"
             >
               <source src="videos_thum/sh.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="slide" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="856059117">
             <video
-              class="video_thumbnail"
+              class="video_thumbnail_video_slider"
               loop
               muted
               playsinline
-              preload="metadata"
+              preload="auto"
             >
               <source src="videos_thum/sh.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="slide" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="856059117">
             <video
-              class="video_thumbnail"
+              class="video_thumbnail_video_slider"
               loop
               muted
               playsinline
-              preload="metadata"
+              preload="auto"
             >
               <source src="videos_thum/sh.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="slide" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="856059117">
             <video
-              class="video_thumbnail"
+              class="video_thumbnail_video_slider"
               loop
               muted
               playsinline
-              preload="metadata"
+              preload="auto"
             >
               <source src="videos_thum/sh.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="slide" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="856059117">
             <video
-              class="video_thumbnail"
+              class="video_thumbnail_video_slider"
               loop
               muted
               playsinline
-              preload="metadata"
+              preload="auto"
             >
               <source src="videos_thum/sh.mp4" type="video/mp4" />
             </video>
-          </div>
           </div>
         </div>
+        <!-- Track 2: Will be populated by JavaScript with clones -->
+        <div
+          class="carousel-track_video_slider"
+          id="cloned-video-track_video_slider"
+        ></div>
       </div>
+    </div>
+    <!-- ///////////////////////////////////////// -->
       <!-- /////////////////////////////////// -->
       <!-- /////////////////////////////////// -->
       <div class="vd_number_box">
@@ -393,76 +408,195 @@
       </section>
       <!-- ///////////////////////////////////////// -->
       <!-- ///////////////////////////////////////// -->
-      <div class="omlaay_box">
-        <div class="omlaay_net_background"></div>
+      <!-- ///////////////////////////////////////// -->
+    <div class="omlaay_box">
+      <div class="omlaay_net_background"></div>
+    </div>
+    <div class="all_omlaa_logos_box">
+      <div
+        class="logos_carousel"
+        aria-live="polite"
+        aria-label="Image Carousel"
+      >
+        <!-- First track: Contains the original set of slides -->
+        <div class="logos_carousel-track" id="original-track">
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp akhdar_img"
+              src="images/company/akhdar.png"
+              loading="lazy"
+              alt="أخضر"
+            />
+          </div>
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp ethad_img"
+              src="images/company/ethad_s3ody.png"
+              loading="lazy"
+              alt="الاتحاد الرياضي السعودي للجامعات"
+            />
+          </div>
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp KimCam_img"
+              src="images/company/KimCam.png"
+              loading="lazy"
+              alt="KimCam Academy"
+            />
+          </div>
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp Soor_img"
+              src="images/company/Soor.png"
+              loading="lazy"
+              alt="Soor"
+            />
+          </div>
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp gahezia_img"
+              src="images/company/gahezia.png"
+              loading="lazy"
+              alt="جاهزية المليار"
+            />
+          </div>
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp had_img"
+              src="images/company/had.png"
+              loading="lazy"
+              alt="هاد للدعوة والإرشاد"
+            />
+          </div>
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp qasem_img"
+              src="images/company/qasem.png"
+              loading="lazy"
+              alt="جامعة القصيم"
+            />
+          </div>
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp shorta_img"
+              src="images/company/shorta_sharqa.png"
+              loading="lazy"
+              alt="القيادة العامة لشرطة الشارقة"
+            />
+          </div>
+        </div>
+
+        <!-- Second track: Will be populated by JavaScript with clones of the first track's slides -->
+        <div class="logos_carousel-track" id="cloned-track"></div>
       </div>
-      <div class="all_omlaa_logos_box">
-        <div class="logos_carousel" aria-live="polite" aria-label="Image Carousel">
-          <div class="logos_carousel-track">
-            <!-- Original Slides -->
-            <div class="logos_slide">
-              <img class="logos_img_comp akhdar_img" src="./images/company/akhdar.png" loading="lazy" alt="" />
+    </div>
+      <!-- ///////////////////////////////////////////////////// -->
+      <!-- ///////////////////////////////////////////////////// -->
+    <div class="all_omlaa_logos_box_left">
+      <div
+        class="logos_carousel_left"
+        aria-live="polite"
+        aria-label="Image Carousel Left"
+      >
+        <!-- First track: Contains the original set of slides -->
+        <div class="logos_carousel-track_left" id="original-track-left">
+          <!-- Original Slides -->
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/abd_alrahman.jpg"
+                loading="lazy"
+                alt="Abd Alrahman"
+              />
             </div>
-            <div class="logos_slide">
-              <img class="logos_img_comp ethad_img" src="./images/company/ethad_s3ody.png" loading="lazy" alt="" />
+          </div>
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/abo_bakr.jpg"
+                loading="lazy"
+                alt="Abo Bakr"
+              />
             </div>
-            <div class="logos_slide">
-              <img class="logos_img_comp KimCam_img" src="./images/company/KimCam.png" loading="lazy" alt="" />
+          </div>
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/al_ghafes.jpg"
+                loading="lazy"
+                alt="Al Ghafes"
+              />
             </div>
-            <div class="logos_slide">
-              <img class="logos_img_comp Soor_img" src="./images/company/Soor.png" loading="lazy" alt="" />
+          </div>
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/ayman.jpg"
+                loading="lazy"
+                alt="Ayman"
+              />
             </div>
-            <div class="logos_slide">
-              <img class="logos_img_comp gahezia_img" src="./images/company/gahezia.png" loading="lazy" alt="" />
+          </div>
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/fas.jpg"
+                loading="lazy"
+                alt="Fas"
+              />
             </div>
-            <div class="logos_slide">
-              <img class="logos_img_comp had_img" src="./images/company/had.png" loading="lazy" alt="" />
+          </div>
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/feqy.jpg"
+                loading="lazy"
+                alt="Feqy"
+              />
             </div>
-            <div class="logos_slide">
-              <img class="logos_img_comp qasem_img" src="./images/company/qasem.png" loading="lazy" alt="" />
+          </div>
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/gel_yaqraa.jpg"
+                loading="lazy"
+                alt="Gel Yaqraa"
+              />
             </div>
-            <div class="logos_slide">
-              <img class="logos_img_comp shorta_img" src="./images/company/shorta_sharqa.png" loading="lazy" alt="" />
+          </div>
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/omar_abd_alrahem.jpg"
+                loading="lazy"
+                alt="Omar Abd Alrahem"
+              />
+            </div>
+          </div>
+          <div class="logos_slide_left">
+            <div class="logos_img_wrapper">
+              <img
+                class="logos_img"
+                src="./images/creator/saleh.jpg"
+                loading="lazy"
+                alt="Saleh"
+              />
             </div>
           </div>
         </div>
+
+        <!-- Second track: Will be populated by JavaScript with clones -->
+        <div class="logos_carousel-track_left" id="cloned-track-left"></div>
       </div>
-      <!-- ///////////////////////////////////////////////////// -->
-      <!-- ///////////////////////////////////////////////////// -->
-      <div class="all_omlaa_logos_box_left">
-        <div class="logos_carousel_left" aria-live="polite" aria-label="Image Carousel">
-          <div class="logos_carousel-track_left">
-            <!-- Original Slides -->
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/abd_alrahman.jpg" loading="lazy" alt="" />
-             </div>
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/abo_bakr.jpg" loading="lazy" alt="" />
-            </div>
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/al_ghafes.jpg" loading="lazy" alt="" />
-            </div>
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/ayman.jpg" loading="lazy" alt="" />
-            </div>
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/fas.jpg" loading="lazy" alt="" />
-            </div>
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/feqy.jpg" loading="lazy" alt="" />
-            </div>
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/gel_yaqraa.jpg" loading="lazy" alt="" />
-            </div>
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/omar_abd_alrahem.jpg" loading="lazy" alt="" />
-            </div>
-            <div class="logos_slide_left">
-              <img class="logos_img" src="./images/creator/saleh.jpg" loading="lazy" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
       <!-- /////////////////////////////////// -->
       <!-- /////////////////////////////////// -->
        <div class="podcast_shorts_box">
@@ -625,9 +759,9 @@
   ></script> -->
     <!-- ---------------- -->
     <!-- ---------------- -->
+    <script src="js/video_thumb.js"></script>
     <script src="js/header.js"></script>
     <script src="js/hoom.js"></script>
-    <script src="js/video_thumb.js"></script>
     <script src="js/company_logo.js"></script>
     <script src="js/creator_logo.js"></script>
   </body>
