@@ -513,10 +513,11 @@ input[type = "checkbox"] {
 }
 
 
-.m-links{
+.m_links{
     z-index: 555;
     color: white;
-    /* background-color: #0C00B5; */
+    background-color: #0C00B5;
+    border: 2px solid #0C00B5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -532,9 +533,12 @@ input[type = "checkbox"] {
     border-radius: 40px;
     padding: 10px 25px; 
 }
-.m-links.active_navlink-m{
-    color: #6570b6;
+.m_links:hover{
+    background-color: #C9E8FF;
+    color: #0C00B5;
+
 }
+
 
 .show-m-nav{
     height: 300px;
@@ -543,14 +547,14 @@ input[type = "checkbox"] {
 }
 /* ////////////////// start media query ////////////////////////////////////////// */
 @media screen and (max-width:970px){
-        .pixel-btn{
+        .d_links{
             width: 100px;
             height: 45px;
             margin-left: 25px;
             font-size: 13px;
         }
 
-        .Pixel_yo{
+        .d_links_youtube{
         width: 140px;
         height: 40px;
         margin-left: 10px;
@@ -558,21 +562,14 @@ input[type = "checkbox"] {
       }
 
       .play_header{
-        left: -10px;
-        top: 0px;
+        left: -20px;
+        top: -3px;
         width: 36px;
         height: 44px;
 
       }
-      .pixel_a::before{
-        width: 80px;
-        height: 48px;
-        left: 10px;
-        top: -22px;
-        padding: 8px 0 ;
-    }
     .d_nav::before{
-    height: 68.5%;
+    height: 85%;
     width: 95%;
     left: 53%;
     top: 50%;
@@ -582,6 +579,16 @@ input[type = "checkbox"] {
     padding-right: 0px;
     padding-left: 60px;
     }
+
+    .d_links::before{
+      width: 100%;
+      height: 136%;
+      left: -20px;
+      top: -10px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      border-radius: 40px 0 0 40px;  
+      }
 }
 /* ////////////////////*/
 @media screen and (max-width: 767px){
@@ -602,14 +609,11 @@ input[type = "checkbox"] {
         top: 32px;
         left: 20px;
         }
-      .pixel-btn{
+      .d_links{
             display: none;
           }
-        .pixel_a::before{
-        display: none;
-    }
         .d_nav::before{
-        height: 45%;
+        height: 70%;
         width: 65%;
         left: 53%;
         top: 50%;
@@ -619,18 +623,14 @@ input[type = "checkbox"] {
         padding-right: 0px;
         padding-left: 60px;
         }
-        .Pixel_yo{
-        display: block ;
-        width: 140px;
-        height: 40px;
-        margin-left: 10px;
-        font-size: 14px;
-      }
 
-        .play_header{
-        width: 32px;
-        height: 38px;
-        }
+      .play_header{
+        left: -20px;
+        top: -2px;
+        width: 36px;
+        height: 44px;
+
+      }
 }
 /* ********************************************** */
 /* ********************************************** */
@@ -647,36 +647,31 @@ input[type = "checkbox"] {
         margin-top: 0px;
         margin-left: 40px;
     }
-    .d_nav::before{
-    content: "";
-    position: absolute;
-    height: 50%;
-    width: 80%;
-    left: 55%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid #ffffff;
-    border-radius: 40px;
-    padding-top: 17px;
-    padding-bottom: 16.5px;
-    padding-right: 0px;
-    padding-left: 30px;
-    }
-      .Pixel_yo{
+        .d_nav::before{
+        height: 70%;
+        width: 65%;
+        left: 53%;
+        top: 50%;
+        border-radius: 40px;
+        padding-top: 17px;
+        padding-bottom: 16.5px;
+        padding-right: 0px;
+        padding-left: 60px;
+        }
+      .d_links_youtube{
         width: 100px;
         height: 30px;
         margin-left: 10px;
-        font-size: 5px !important;
+        font-size: 13px !important;
       }
-    .pixel_a_yo span{
-    font-size: 13px !important;
-  }
 
 
       .play_header{
-        width: 27px;
-        height: 33px;
-        left: -5px;
+        left: -20px;
+        top: -2px;
+        width: 33px;
+        height: 41px;
+
       }
       .main-header .container{
         height: 120px;
