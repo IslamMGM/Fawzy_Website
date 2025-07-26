@@ -1,58 +1,50 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Elements
   const menuToggle = document.querySelector(".menu-toggle");
   const sidebar = document.querySelector(".sidebar");
   const navItems = document.querySelectorAll(".nav-item");
   const contentSections = document.querySelectorAll(".content-section");
   const paginationContainers = document.querySelectorAll(".pagination");
 
-  // Constants
-  const CARDS_PER_PAGE = 3; // Number of cards to show per page
+  const CARDS_PER_PAGE = 3;
 
-  // Mobile menu toggle
   menuToggle.addEventListener("click", function () {
     sidebar.classList.toggle("active");
   });
 
-  // Navigation item click handler
   navItems.forEach((item) => {
     item.addEventListener("click", function () {
-      // Remove active class from all nav items
+      //
       navItems.forEach((nav) => nav.classList.remove("active"));
 
-      // Add active class to clicked nav item
+      //
       this.classList.add("active");
 
-      // Get target section ID
+      //
       const targetId = this.getAttribute("data-target");
 
-      // Hide all content sections
+      //
       contentSections.forEach((section) => {
         section.classList.remove("active");
       });
 
-      // Show target section
+      //
       const targetSection = document.getElementById(targetId);
       targetSection.classList.add("active");
 
-      // Reset pagination to first page when switching sections
       resetPagination(targetSection);
 
-      // Close sidebar on mobile after selection
       if (window.innerWidth < 768) {
         sidebar.classList.remove("active");
       }
     });
   });
 
-  // Initialize pagination for all sections
   contentSections.forEach((section) => {
     if (section.classList.contains("active")) {
       resetPagination(section);
     }
   });
 
-  // Pagination functionality
   paginationContainers.forEach((container) => {
     const buttons = container.querySelectorAll(".page-btn");
     const prevBtn = container.querySelector(".page-prev");
@@ -61,19 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const section = document.getElementById(sectionId);
     const cards = section.querySelectorAll(".card");
 
-    // Calculate total pages needed
     const totalPages = Math.ceil(cards.length / CARDS_PER_PAGE);
 
-    // Initialize pagination
     let currentPage = 1;
 
-    // Page button click handler
     buttons.forEach((button) => {
       button.addEventListener("click", function () {
-        // Remove active class from all buttons
         buttons.forEach((btn) => btn.classList.remove("active"));
 
-        // Add active class to clicked button
         this.classList.add("active");
 
         // Update current page
