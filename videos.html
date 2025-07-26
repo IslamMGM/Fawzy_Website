@@ -112,7 +112,307 @@
     <!-- /////////////////////////////////// -->
     <div class="wrapper">
       <main>
-        <!-- Page content -->
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <h1><i class="fas fa-th-large"></i> أعمالي</h1>
+          </div>
+          <nav class="nav-links">
+            <div class="nav-item active" data-target="Shorts">
+              <i class="fa-solid fa-file-video"></i>
+              <span>Shorts</span>
+            </div>
+            <div class="nav-item" data-target="Longs">
+              <i class="fa-solid fa-clapperboard"></i>
+              <span>Longs</span>
+            </div>
+            <div class="nav-item" data-target="Other">
+              <i class="fa-solid fa-film"></i>
+              <span>Other</span>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+          <!-- Shorts Section -->
+          <section id="Shorts" class="content-section active">
+            <div class="content-header">
+              <h2>Shorts</h2>
+              <p>Some text Some text Some text</p>
+            </div>
+
+            <div class="cards-container">
+              <!-- Short Cards -->
+              <div class="card">
+                <div class="card-img">
+                  <i class="fas fa-pen-nib"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Modern CSS Techniques</h3>
+                  <p>
+                    Explore the latest CSS features including grid, flexbox, and
+                    custom properties to create responsive layouts.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="far fa-clock"></i> 10 min read</span>
+                    <span><i class="far fa-calendar"></i> May 12, 2023</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Responsive Design Principles</h3>
+                  <p>
+                    Learn how to create websites that look great on all devices
+                    using modern responsive design techniques.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                    <span><i class="far fa-calendar"></i> Apr 28, 2023</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Optimizing Web Performance</h3>
+                  <p>
+                    Discover strategies to make your websites load faster and
+                    provide a better user experience.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="far fa-clock"></i> 12 min read</span>
+                    <span><i class="far fa-calendar"></i> Apr 15, 2023</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fas fa-lock"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Web Security Best Practices</h3>
+                  <p>
+                    Essential security measures every web developer should
+                    implement to protect their applications.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="far fa-clock"></i> 15 min read</span>
+                    <span><i class="far fa-calendar"></i> Mar 30, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination" id="Shorts-pagination">
+              <button class="page-prev" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- Longs Section -->
+          <section id="Longs" class="content-section">
+            <div class="content-header">
+              <h2>Longs</h2>
+              <p>Some text Some text Some text</p>
+            </div>
+
+            <div class="cards-container">
+              <!-- Long Cards -->
+              <div class="card">
+                <div class="card-img">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <div class="card-content">
+                  <h3>HTML5 Masterclass</h3>
+                  <p>
+                    Comprehensive guide to modern HTML5 features including
+                    semantic elements and APIs.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="fas fa-tags"></i> Beginner</span>
+                    <span><i class="fas fa-video"></i> 12 lessons</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Advanced CSS Techniques</h3>
+                  <p>
+                    Take your CSS skills to the next level with animations,
+                    transforms, and layout systems.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="fas fa-tags"></i> Intermediate</span>
+                    <span><i class="fas fa-video"></i> 15 lessons</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fab fa-js"></i>
+                </div>
+                <div class="card-content">
+                  <h3>JavaScript Fundamentals</h3>
+                  <p>
+                    Learn JavaScript from the ground up with practical examples
+                    and Other.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="fas fa-tags"></i> Beginner</span>
+                    <span><i class="fas fa-video"></i> 20 lessons</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="card-content">
+                  <h3>React Crash Course</h3>
+                  <p>
+                    Build modern web applications with React, hooks, and context
+                    API.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="fas fa-tags"></i> Advanced</span>
+                    <span><i class="fas fa-video"></i> 18 lessons</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination" id="Longs-pagination">
+              <button class="page-prev" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- Other Section -->
+          <section id="Other" class="content-section">
+            <div class="content-header">
+              <h2>Others</h2>
+              <p>Some text Some text Some text</p>
+            </div>
+
+            <div class="cards-container">
+              <!-- Other Cards -->
+              <div class="card">
+                <div class="card-img">
+                  <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="card-content">
+                  <h3>E-commerce Platform</h3>
+                  <p>
+                    Full-featured online store with product catalog, cart, and
+                    payment integration.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="fab fa-react"></i> React</span>
+                    <span><i class="fab fa-node-js"></i> Node.js</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Real-time Chat App</h3>
+                  <p>
+                    Instant messaging application with real-time updates and
+                    notification system.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                    <span><i class="fas fa-bolt"></i> Socket.IO</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fas fa-music"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Music Streaming Service</h3>
+                  <p>
+                    Platform for streaming music with personalized playlists and
+                    recommendations.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="fab fa-angular"></i> Angular</span>
+                    <span><i class="fas fa-cloud"></i> Firebase</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <i class="fas fa-tasks"></i>
+                </div>
+                <div class="card-content">
+                  <h3>Other Management Tool</h3>
+                  <p>
+                    Collaborative platform for teams to manage tasks, deadlines,
+                    and resources.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="fab fa-react"></i> React</span>
+                    <span><i class="fab fa-node-js"></i> Express</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination" id="Other-pagination">
+              <button class="page-prev" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn">4</button>
+              <button class="page-next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+        </main>
       </main>
       <footer class="main_footer">
         <div class="container">
@@ -165,5 +465,6 @@
     <!-- ---------------- -->
     <!-- ---------------- -->
     <script src="js/header.js"></script>
+    <script src="js/videos_page.js"></script>
   </body>
 </html>
