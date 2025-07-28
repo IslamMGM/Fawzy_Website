@@ -64,6 +64,29 @@
     transform: translateY(0);
     height: 517px;
     width: 300px;
+    position: relative;
+}
+.card::before{
+    position: absolute;
+    content: "\f04b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    background-color: #0000009a;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;    
+    z-index: 1;
+    border: 2px solid #c9e8ffa1;
 }
 
 .iframe_box{
