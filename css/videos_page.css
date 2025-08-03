@@ -18,6 +18,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
+
 }
 
 .content_header_first{
@@ -58,6 +59,15 @@
 }
 /* ///////////////////////////////////////////// */
 /* ///////////////////////////////////////////// */
+#Shorts{
+    scroll-margin-top: 160px; 
+}
+#Longs{
+    scroll-margin-top: 160px;
+}
+#Other{
+    scroll-margin-top: 160px; 
+}
 
 .card {
     transition: var(--transition);
