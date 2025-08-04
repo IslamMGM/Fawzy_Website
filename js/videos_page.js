@@ -28,7 +28,16 @@ document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
 
     const currentCard = this.closest(".card");
 
-    // === Step 1: Hide all thumbnails and stop/hide all iframes ===
+    // Play the video iframe under this thumbnail
+    const iframe = currentCard.querySelector("iframe");
+    if (iframe) {
+      const player = new Vimeo.Player(iframe);
+      player.play().catch((error) => {
+        console.warn("Vimeo play error:", error.name);
+      });
+    }
+
+    // Show all other thumbnails
     document.querySelectorAll(".video_thumbnail_image").forEach((otherImg) => {
       if (otherImg !== this) {
         otherImg.style.display = "block";
@@ -38,31 +47,12 @@ document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
       }
     });
 
+    // Remove hidden class from all cards
     document.querySelectorAll(".card").forEach((card) => {
       card.classList.remove("hide-before", "before-hidden");
     });
 
-    document.querySelectorAll("iframe").forEach((iframe) => {
-      iframe.style.display = "none";
-      try {
-        const player = new Vimeo.Player(iframe);
-        player.unload(); // Stop video + unload player
-      } catch (e) {}
-    });
-
-    // === Step 2: Show clicked iframe, then play ===
-    const iframe = currentCard.querySelector("iframe");
-    if (iframe) {
-      iframe.style.display = "block"; // Must be visible first
-      setTimeout(() => {
-        const player = new Vimeo.Player(iframe);
-        player.play().catch((error) => {
-          console.warn("Vimeo play error:", error.name);
-        });
-      }, 50); // Short delay to ensure it's visible
-    }
-
-    // === Step 3: Animate clicked thumbnail + before ===
+    // Animate and hide clicked thumbnail
     this.classList.add("disappear");
     currentCard.classList.add("hide-before");
 
@@ -73,8 +63,9 @@ document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
   });
 });
 
-// === Restore everything on body click ===
+// Click anywhere in body to restore all
 document.body.addEventListener("click", function () {
+  // Show all thumbnail images again
   document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
     img.style.display = "block";
     setTimeout(() => {
@@ -82,15 +73,16 @@ document.body.addEventListener("click", function () {
     }, 10);
   });
 
+  // Reset all card classes
   document.querySelectorAll(".card").forEach((card) => {
     card.classList.remove("hide-before", "before-hidden");
   });
 
+  // Pause all Vimeo videos
   document.querySelectorAll("iframe").forEach((iframe) => {
-    iframe.style.display = "none";
-    try {
-      const player = new Vimeo.Player(iframe);
-      player.unload();
-    } catch (e) {}
+    const player = new Vimeo.Player(iframe);
+    player.pause().catch((error) => {
+      console.warn("Vimeo pause error:", error.name);
+    });
   });
 });
