@@ -166,6 +166,9 @@ main {
                 width: 100%;
                 padding: 5px;
             }
+            .blog-container {
+                margin-top: 180px;
+            }
             .blog-hero h1 {
                 font-size: 2.2rem;
             }
