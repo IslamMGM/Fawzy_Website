@@ -16,7 +16,7 @@ main {
             --secondary: #a29bfe;
             --dark: #2d3436;
             --light: #f5f6fa;
-            --accent: #fd79a8;
+            --accent: #0618C4;
             --text: #636e72;
         }
 
@@ -162,6 +162,10 @@ main {
         /* Footer styles would be here */
         
         @media (max-width: 768px) {
+            .blog-container .container{
+                width: 100%;
+                padding: 5px;
+            }
             .blog-hero h1 {
                 font-size: 2.2rem;
             }
