@@ -32,45 +32,88 @@ main {
             margin-top: 250px;
             margin-bottom: 150px;
         }
+        .blog-container .container{
+            padding: 0 100px;
+        }
         
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-            gap: 3.5rem;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+            gap: 35px;
+            row-gap: 45px;
         }
         
         .blog-card {
-            background: white;
-            border-radius: 12px;
+            background: #F4F2EF;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px #00000007;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .blog-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px #00000009;
         }
-        
+
+        @media (max-width: 1440px) {
+            .blog-container .container{
+                padding: 0 20px;
+            }
+        }
+        @media (max-width: 1330px) {
+            .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 35px;
+            row-gap: 45px;
+        }
+        }
+        @media (max-width: 1125px) {
+            .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 35px;
+            row-gap: 45px;
+        }
+        }
+        @media (max-width: 815px) {
+            .blog-container .container{
+                padding: 0 40px;
+            }
+        }
+        @media (max-width: 500px) {
+            .blog-container .container{
+                padding: 0 20px;
+            }
+        }
+
         .card-image {
-            height: 220px;
-            overflow: hidden;
+            height: 300px;
+            text-align: center;
+            margin: 35px 0;
+            margin-bottom: 0;
         }
-        
+
         .card-image img {
-            width: 100%;
+            width: 90%;
+            border-radius: 20px;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
         
-        .blog-card:hover .card-image img {
+        /* .blog-card:hover .card-image img {
             transform: scale(1.05);
-        }
+        } */
         
         .card-content {
             padding: 1.5rem;
+            padding-right: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            direction: rtl;
         }
         
         .card-meta {
@@ -91,111 +134,69 @@ main {
         }
         
         .card-title {
-            font-size: 1.4rem;
+            font-size: 2.3rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
         
         .card-excerpt {
-            color: var(--text);
+            color: #5a5a5a;
             margin-bottom: 1.5rem;
+            font-weight: 600;
         }
         
         .read-more {
             display: inline-block;
-            color: var(--primary);
+            color: #0C00B5;
             font-weight: 600;
+            font-size: 19px;
             text-decoration: none;
             position: relative;
             padding-bottom: 3px;
+            width: fit-content;
         }
         
         .read-more::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
+            bottom: -5px;
+            right: 0;
             width: 0;
             height: 2px;
-            background: var(--primary);
+            background: #0C00B5;
             transition: width 0.3s ease;
         }
         
         .read-more:hover::after {
-            width: 100%;
+            width: 130%;
+        }
+        .read-more::before {
+            content: "\f060";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 800;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -25px;
+            color: #0C00B5;
+            transition: width 0.3s ease;
         }
         
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 4rem;
+        .read-more:hover::before {
+            transition: width 0.3s ease;
         }
-        
-        .page-numbers {
-            display: flex;
-            list-style: none;
-        }
-        
-        .page-numbers li {
-            margin: 0 0.5rem;
-        }
-        
-        .page-numbers a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .page-numbers a:hover,
-        .page-numbers a.active {
-            background: var(--primary);
-            color: white;
-        }
-        
-        /* Footer styles would be here */
-        
+                
         @media (max-width: 768px) {
-            .blog-container .container{
-                width: 100%;
-                padding: 5px;
-            }
             .blog-container {
                 margin-top: 180px;
             }
-            .blog-hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .blog-hero p {
-                font-size: 1rem;
-            }
-            
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .card-image {
-                height: 180px;
-            }
+                height: 250px;
+            }            
         }
         
-        @media (max-width: 480px) {
-            .blog-hero {
-                padding: 3rem 1rem;
-            }
-            
-            .blog-container {
-                padding: 0 1rem;
-            }
-            
+        @media (max-width: 480px) {            
             .card-content {
-                padding: 1rem;
+                padding: 1.5rem;
             }
         }

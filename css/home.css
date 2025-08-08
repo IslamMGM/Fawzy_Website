@@ -45,10 +45,9 @@ font-size: 110px;
 color: #D7F0F2;
 /* width: 100%;
 height: 100%; */
-top: 12%;
+top: 19px;
 right: 100px;
 transform: rotate(-3deg);
-
 }
 
 .ract_ibda3y_frame_image{
@@ -398,7 +397,7 @@ margin-top: -60px;
 font-size: 80px;
 width: 100%;
 height: 100%;
-top: 18%;
+top: 42px;
 right: 60px;
 }
 .ract_ibda3y_frame_image{
@@ -542,7 +541,7 @@ font-size: 105px;
 color: #D7F0F2;
 width: 100%;
 height: 100%;
-top: 30px;
+top: 27px;
 right: 100px;
 transform: rotate(-3deg);
 
@@ -770,7 +769,7 @@ margin-top: -60px;
 font-size: 80px;
 width: 100%;
 height: 100%;
-top: 16%;
+top: 37px;
 right: 60px;
 }
 .ract_ibda3y_frame_image{
@@ -960,7 +959,7 @@ margin-top: -60px;
 font-size: 68px;
 width: 100%;
 height: 100%;
-top: 14%;
+top: 26px;
 right: 60px;
 }
 .ract_ibda3y_frame_image{
@@ -1200,7 +1199,7 @@ margin-top: -60px;
 font-size: 65px;
 width: 100%;
 height: 100%;
-top: 14%;
+top: 24px;
 right: 60px;
 }
 .ract_ibda3y_frame_image{
@@ -4025,14 +4024,14 @@ top: 20px;
 font-size: 38px;
 }
 .otlb_khedmty {
-font-size: 11px;
-padding: 8px 20px;
+font-size: 18px;
+padding: 8px 22px;
 right: 28px;
 bottom: 35px;
 }
 .otlb_khedmty::before{
 width: 100%;
-height: 35px;
+height: 45px;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
@@ -4094,14 +4093,14 @@ top: 15px;
 font-size: 30px;
 }
 .otlb_khedmty {
-font-size: 10px;
-padding: 6px 16px;
+font-size: 13px;
+padding: 8px 16px;
 right: 25px;
 bottom: 25px;
 }
 .otlb_khedmty::before{
 width: 100%;
-height: 30px;
+height: 35px;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
@@ -4163,14 +4162,14 @@ top: 15px;
 font-size: 22px;
 }
 .otlb_khedmty {
-font-size: 8px;
-padding: 5px 14px;
+font-size: 12px;
+padding: 7px 16px;
 right: 20px;
 bottom: 20px;
 }
 .otlb_khedmty::before{
 width: 100%;
-height: 20px;
+height: 30px;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
