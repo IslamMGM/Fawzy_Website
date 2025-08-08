@@ -7,10 +7,8 @@ document.querySelectorAll(".videos_thum").forEach((source) => {
   const loader = slide.querySelector(".video_loader");
   const videoSrc = source.getAttribute("src");
 
-  // استخدم key في sessionStorage لتحديد إذا كان اللودر اتعرض قبل كده
   const storageKey = `video_loader_shown_${videoSrc}`;
 
-  // لو الفيديو اتحمل خلاص أو اللودر ظهر له قبل كده → خفيه فورًا
   const alreadyLoaded = sessionStorage.getItem(storageKey) === "true";
 
   const hideLoader = () => {
@@ -23,14 +21,12 @@ document.querySelectorAll(".videos_thum").forEach((source) => {
     return;
   }
 
-  // ✅ أمان إضافي: تأكد أن اللودر يظهر فقط لو الفيديو فعليًا مش جاهز
   let loaderTimeout = setTimeout(() => {
     if (video.readyState < 3) {
       loader.style.display = "flex";
     }
   }, 100);
 
-  // لما يتحمل الفيديو، نخفي اللودر ونحفظ الحالة
   const handleLoad = () => {
     clearTimeout(loaderTimeout);
     hideLoader();
