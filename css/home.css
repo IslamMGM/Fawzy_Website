@@ -2200,7 +2200,7 @@ z-index: -1;
 --gap-width_video_slider: 200px;
 --slide-width_video_slider: 300px;
 --slide-height_video_slider: 514px;
---scroll-duration_video_slider: 30s;
+--scroll-duration_video_slider: 35s;
 --total-slides_video_slider: 5; /* This is the number of original slides */
 
 /* This calculates the width of N slides and N-1 gaps between them */
