@@ -2197,7 +2197,7 @@ z-index: -1;
 }
 /* Animation_videos */
 :root {
---gap-width_video_slider: 180px;
+--gap-width_video_slider: 200px;
 --slide-width_video_slider: 300px;
 --slide-height_video_slider: 514px;
 --scroll-duration_video_slider: 30s;
@@ -2325,7 +2325,7 @@ transform: translateX(0);
 /* The animation should move by the content width plus one gap,
 because the track itself has the gap built-in. */
 transform: translateX(
-calc(-1 * var(--content-width_video_slider) - 1.65 * var(--gap-width_video_slider))
+calc(-1 * var(--content-width_video_slider) - 1 * var(--gap-width_video_slider))
 );
 }
 }
@@ -5090,4 +5090,55 @@ display: grid;
 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 gap: 40px;
 }
+}
+
+
+
+
+/* //////////// video thum loader //////////// */
+.slide_video_slider {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.video_loader {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  font-family: sans-serif;
+  gap: 10px;
+}
+
+.film-reel-spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at center, #0C00B5 20%, #0C00B5 80%);
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+.reel-hole {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.hole1 { top: 5px; left: 25px; }
+.hole2 { top: 25px; left: 5px; }
+.hole3 { top: 25px; right: 5px; }
+.hole4 { bottom: 5px; left: 25px; }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
