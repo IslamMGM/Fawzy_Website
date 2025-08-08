@@ -1,49 +1,29 @@
-document.querySelectorAll(".videos_thum").forEach((source) => {
-  const video = source.closest("video");
-  const slide = source.closest(".slide_video_slider");
-
-  if (!video || !slide) return;
-
+document.querySelectorAll(".slide_video_slider").forEach((slide) => {
+  const video = slide.querySelector("video");
   const loader = slide.querySelector(".video_loader");
-  const videoSrc = source.getAttribute("src");
 
-  const storageKey = `video_loader_shown_${videoSrc}`;
-
-  const alreadyLoaded = sessionStorage.getItem(storageKey) === "true";
+  let loaderTimeout;
 
   const hideLoader = () => {
-    loader.style.display = "none";
-    sessionStorage.setItem(storageKey, "true");
-  };
-
-  if (alreadyLoaded || video.readyState >= 3) {
-    hideLoader();
-    return;
-  }
-
-  let loaderTimeout = setTimeout(() => {
-    if (video.readyState < 3) {
-      loader.style.display = "flex";
-    }
-  }, 100);
-
-  const handleLoad = () => {
     clearTimeout(loaderTimeout);
-    hideLoader();
+    loader.style.display = "none";
   };
 
-  video.addEventListener("canplay", handleLoad, { once: true });
-  video.addEventListener("loadeddata", handleLoad, { once: true });
-  video.addEventListener("playing", handleLoad, { once: true });
+  if (video.readyState >= 4) {
+    hideLoader();
+  } else {
+    loaderTimeout = setTimeout(() => {
+      loader.style.display = "flex";
+    }, 300);
 
-  video.addEventListener(
-    "error",
-    () => {
+    video.addEventListener("canplaythrough", hideLoader);
+    video.addEventListener("loadeddata", hideLoader);
+
+    video.addEventListener("error", () => {
       clearTimeout(loaderTimeout);
       loader.innerHTML =
         '<span style="color:red;">❌ Failed to load video</span>';
       loader.style.display = "flex";
-    },
-    { once: true }
-  );
+    });
+  }
 });
