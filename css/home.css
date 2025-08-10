@@ -3688,6 +3688,7 @@ z-index: -1;
 margin: 0 auto;
 margin-top: 150px;
 margin-bottom: 50px;
+scroll-margin-top: 175px; 
 }
 @media screen and (min-width: 1440px){
 .podcast_shorts_box .container{
