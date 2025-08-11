@@ -4,7 +4,9 @@ const menuButton = document.querySelector(".menuButton");
 const svg_burger = document.querySelector(".svg_burger");
 // //////////////////
 const any_link = document.querySelectorAll(".any_link");
-const m_links = document.querySelectorAll(".m_links");
+const m_links_to_clodse_nav = document.querySelectorAll(
+  ".m_links_to_clodse_nav"
+);
 // //////////////////
 const line_top_bottom_burger = document.querySelector(
   ".line_top_bottom_burger"
@@ -84,7 +86,7 @@ any_link.forEach((link) => {
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
-m_links.forEach((link) => {
+m_links_to_clodse_nav.forEach((link) => {
   link.addEventListener("click", () => {
     mobNav.classList.remove("show-m-nav");
     svg_burger.style.transform = "rotate(0)";
