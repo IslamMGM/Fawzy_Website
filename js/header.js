@@ -4,6 +4,7 @@ const menuButton = document.querySelector(".menuButton");
 const svg_burger = document.querySelector(".svg_burger");
 // //////////////////
 const any_link = document.querySelectorAll(".any_link");
+const m_links = document.querySelectorAll(".m_links");
 // //////////////////
 const line_top_bottom_burger = document.querySelector(
   ".line_top_bottom_burger"
@@ -67,6 +68,23 @@ document.body.addEventListener("click", function (event) {
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 any_link.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobNav.classList.remove("show-m-nav");
+    svg_burger.style.transform = "rotate(0)";
+    line_top_bottom_burger.classList.remove("active_burger");
+    menuButton.classList.remove("active_menuButton");
+    // //////////////////////////////////////
+    if (tog && event.target !== tog) {
+      tog.checked = false;
+    }
+    // //////////////////////////////////////
+  });
+});
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+m_links.forEach((link) => {
   link.addEventListener("click", () => {
     mobNav.classList.remove("show-m-nav");
     svg_burger.style.transform = "rotate(0)";
