@@ -242,9 +242,9 @@ padding-left: 30px;
           align-items: center;
           direction: ltr;
 
-              backdrop-filter: blur(4px) saturate(70%);
+              backdrop-filter: blur(3px) saturate(60%);
     -webkit-backdrop-filter: blur(15px) saturate(94%);
-    background-color: rgba(223, 223, 223, 0.404);
+    background-color: rgba(255, 255, 255, 0.356);
     border: 1px solid #14141423;
 
 }
