@@ -134,15 +134,17 @@ main {
         }
         
         .card-title {
-            font-size: 2.3rem;
+            font-size: 1.7rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
         
         .card-excerpt {
-            color: #5a5a5a;
+            color: #707070;
             margin-bottom: 1.5rem;
             font-weight: 600;
+            font-size: 1.1rem;
+            line-height: 1.7em;
         }
         
         .read-more {
@@ -200,3 +202,62 @@ main {
                 padding: 1.5rem;
             }
         }
+
+
+
+/* /////////////////////////////////////////////// */
+.my-swal-popup {
+    backdrop-filter: blur(10px) saturate(50%);
+    -webkit-backdrop-filter: blur(10px) saturate(20%);
+    background-color: rgba(255, 255, 255, 0.356);
+    border: 2px solid #634f4f96;
+    padding: 20px;
+}
+
+.my-swal-title {
+    color: #242627;
+    /* font-size: 25px; */
+    font-size: 0px;
+    font-weight: 800;
+}
+
+.my-swal-text {
+    color: #373a3b;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.my-swal-button {
+    background-color: #0c364e !important;
+    color: #fff !important;
+    border-radius: 12px;
+    border: 2px solid #0c364e;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.my-swal-button:hover {
+    color: #0c364e !important;
+    background-color: transparent !important;
+
+}
+
+/* Icon styling */
+.swal2-icon.swal2-info {
+    border-color: #4e45c5 !important;
+    color: #4e45c5 !important;
+    background-color: transparent !important;
+}
+
+.swal2-icon.swal2-info .swal2-icon-content {
+    color: #0C00B5 !important; /* the "i" inside */
+}
+
+    @media (max-width: 768px){
+        .my-swal-popup {
+        width: 92%;
+        }
+    }
+
+/* /////////////////////////////////////////////// */

@@ -3355,7 +3355,7 @@ z-index: -1;
 --gap-width_logos: 150px;
 --slide-width_logos: 300px;
 --scroll-duration_logos: 50s; /* Adjust for desired speed */
---total-slides_logos: 8; /* Number of original slides */
+--total-slides_logos: 9; /* Number of original slides */
 
 /* This calculates the width of N slides and N-1 gaps between them */
 --content-width_logos: calc(
@@ -3462,6 +3462,10 @@ height: 89px;
 width: 180px;
 height: 184px;
 }
+.lifestyle_img {
+width: 330px;
+height: 330px;
+}
 
 /* Keyframes for the continuous scroll */
 @keyframes scroll_logo {
@@ -3538,6 +3542,11 @@ animation-play-state: paused;
     width: 150px;
     height: 153px;
     }
+    .lifestyle_img {
+    width: 200px;
+    height: 200px;
+    }
+    
 }
 
 /* //////////////////////////////////////////////////////// */
@@ -5133,6 +5142,7 @@ gap: 40px;
   font-family: sans-serif;
   gap: 10px;
   border-radius: 40px;
+  /* display: none !important; */
 }
 
 .film-reel-spinner {
@@ -5160,4 +5170,214 @@ gap: 40px;
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+
+/* ///////////////// */
+.a3maly_head_box{
+  margin-bottom: 150px;
+}
+
+.more_shorts {
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+font-weight: 800;
+color: #ffffff;
+padding: 10px 40px;
+border-radius: 78px;
+margin: 0 auto;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+text-wrap: nowrap;
+top: 240px;
+background: linear-gradient(120deg, #262d5c, #443ac9, #262d5c);
+background-size: 200% 100%;
+background-position: 100% 0;
+transition: background-position .3s;
+animation: gradientAnimation 1s infinite alternate;
+
+}
+/* .otlb_khedmty:hover{
+background: linear-gradient(120deg, #ae9712, #262d5c, #ae9712);
+transition: 0.4s;
+} */
+
+@keyframes gradientAnimation {
+0% {
+background-position: 0% 0%;
+}
+100% {
+background-position: 100% 0%;
+}
+}
+
+.more_shorts::before{
+content: "";
+position: absolute;
+width: 110%;
+height: 59.47px;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+border: 3px solid #C9E8FF;
+border-radius: 40px;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 8px;
+padding-left: 8px;
+}
+.more_shorts:hover::before{
+border: 3px solid #1027f1;
+transition: 0.4s;
+}
+
+@media screen and (max-width: 1400px){
+.more_shorts {
+text-decoration: none;
+display: inline-block;
+font-size: 17px;
+font-weight: 800;
+color: #ffffff;
+padding: 10px 40px;
+top: 200px;
+
+}
+
+}
+
+@media screen and (max-width: 800px){
+.more_shorts {
+text-decoration: none;
+display: inline-block;
+font-size: 17px;
+font-weight: 800;
+color: #ffffff;
+padding: 10px 40px;
+top: 170px;
+
+}
+
+.more_shorts::before{
+content: "";
+position: absolute;
+width: 110%;
+height: 55px;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+border: 3px solid #C9E8FF;
+border-radius: 40px;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 3px;
+padding-left: 3px;
+}
+}
+
+/* //////////////////////////////////// */
+.blog_home{
+  margin-top: 170px !important;
+}
+
+
+
+.more_modaona {
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+font-weight: 800;
+color: #ffffff;
+padding: 10px 40px;
+border-radius: 78px;
+margin: 0 auto;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+text-wrap: nowrap;
+top: 150px;
+background: linear-gradient(120deg, #262d5c, #443ac9, #262d5c);
+background-size: 200% 100%;
+background-position: 100% 0;
+transition: background-position .3s;
+animation: gradientAnimation 1s infinite alternate;
+
+}
+/* .otlb_khedmty:hover{
+background: linear-gradient(120deg, #ae9712, #262d5c, #ae9712);
+transition: 0.4s;
+} */
+
+@keyframes gradientAnimation {
+0% {
+background-position: 0% 0%;
+}
+100% {
+background-position: 100% 0%;
+}
+}
+
+.more_modaona::before{
+content: "";
+position: absolute;
+width: 110%;
+height: 59.47px;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+border: 3px solid #C9E8FF;
+border-radius: 40px;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 8px;
+padding-left: 8px;
+}
+.more_modaona:hover::before{
+border: 3px solid #1027f1;
+transition: 0.4s;
+}
+
+@media screen and (max-width: 1400px){
+.more_modaona {
+text-decoration: none;
+display: inline-block;
+font-size: 17px;
+font-weight: 800;
+color: #ffffff;
+padding: 10px 40px;
+top: 150px;
+
+}
+
+}
+
+@media screen and (max-width: 800px){
+.more_modaona {
+text-decoration: none;
+display: inline-block;
+font-size: 17px;
+font-weight: 800;
+color: #ffffff;
+padding: 10px 40px;
+top: 120px;
+
+}
+
+.more_modaona::before{
+content: "";
+position: absolute;
+width: 110%;
+height: 55px;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+border: 3px solid #C9E8FF;
+border-radius: 40px;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 3px;
+padding-left: 3px;
+}
 }

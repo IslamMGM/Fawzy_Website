@@ -37,7 +37,17 @@
     <link rel="stylesheet" href="css/header.css?v=1.0" />
     <link rel="stylesheet" href="css/home.css?v=1.0" />
     <link rel="stylesheet" href="css/footer.css?v=1.0" />
+    <link rel="stylesheet" href="css/blog.css" />
     <link rel="shortcut icon" type="image/x-icon" href="images/logo_svg.svg" />
+    <!-- //// -->
+    <!-- //// -->
+         <!-- //// -->
+    <!-- //// -->
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- //// -->
     <!-- //// -->
     <!-- <link
@@ -103,6 +113,7 @@
               <a class="d_links" id="link4" href="blog.html">المدونة</a>
             </li>
           </ul>
+          <!-- {{-- Mobile Menu --}} -->
           <label for="check" class="menuButton">
             <input id="check" class="toogle" type="checkbox" />
             <svg class="svg_burger" viewBox="0 0 32 32">
@@ -118,17 +129,17 @@
               <li class="m-lin a3maly_link_mobile">
                 <a class="m_links a3maly_mobile">أعمالي</a>
                 <div class="dropdown-menu_mobile" id="services-dropdown">
-                  <a href="videos.html#Shorts" class="dropdown-item_mobile any_link">
+                  <a href="videos.html#Shorts" class="dropdown-item_mobile any_link"> Shorts
                     <i class="fa-solid fa-film"></i>
-                    <span>Shorts</span>
                   </a>
-                  <a href="videos.html#Longs" class="dropdown-item_mobile any_link">
+                  <a href="videos.html#Longs" class="dropdown-item_mobile any_link"> Youtube
                     <i class="fa-solid fa-file-video"></i>
-                    <span>Longs</span>
                   </a>
-                  <a href="videos.html#Other" class="dropdown-item_mobile any_link">
+                  <a href="videos.html#Other" class="dropdown-item_mobile any_link"> Collage
                     <i class="fa-solid fa-clapperboard"></i>
-                    <span>Others</span>
+                  </a>
+                  <a href="videos.html#Other" class="dropdown-item_mobile any_link"> with Ai
+                    <i class="fa-solid fa-clapperboard"></i>
                   </a>
                 </div>
               </li>
@@ -248,6 +259,7 @@
           <h2 class="a3maly_head">أعمــــالي المميــزة</h2>
           <h3 class="a3maly_sub_head">فيديـــــــــــــوهات مختــــــــــــــــــــارة</h3>
           <img class="a3maly_shape" src="images/a3maly_bg_shape.svg" alt="">
+            <a class="more_shorts" href="videos.html#shorts" target="_blank">شاهد المزيد من أعمالي</a>
         </div>
       </div>
     </section>
@@ -268,7 +280,7 @@
           class="carousel-track_video_slider"
           id="original-video-track_video_slider"
         >
-          <div class="slide_video_slider" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="1109992558">
             <div class="video_loader">
               <div class="film-reel-spinner">
                 <div class="reel"></div>
@@ -286,10 +298,10 @@
               playsinline
               preload="auto"
             >
-              <source class="videos_thum" src="videos_thum/sh.mp4" type="video/mp4" />
+              <source class="videos_thum" src="videos_thum/1.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="slide_video_slider" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="1109994127">
             <div class="video_loader">
               <div class="film-reel-spinner">
                 <div class="reel"></div>
@@ -306,10 +318,10 @@
               playsinline
               preload="auto"
             >
-              <source class="videos_thum" src="videos_thum/sh.mp4" type="video/mp4" />
+              <source class="videos_thum" src="videos_thum/2.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="slide_video_slider" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="1110027422">
             <div class="video_loader">
               <div class="film-reel-spinner">
                 <div class="reel"></div>
@@ -326,10 +338,10 @@
               playsinline
               preload="auto"
             >
-              <source class="videos_thum" src="videos_thum/sh.mp4" type="video/mp4" />
+              <source class="videos_thum" src="videos_thum/3.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="slide_video_slider" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="1109998370">
             <div class="video_loader">
               <div class="film-reel-spinner">
                 <div class="reel"></div>
@@ -346,10 +358,10 @@
               playsinline
               preload="auto"
             >
-              <source class="videos_thum" src="videos_thum/sh.mp4" type="video/mp4" />
+              <source class="videos_thum" src="videos_thum/4.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="slide_video_slider" data-vimeo="856059117">
+          <div class="slide_video_slider" data-vimeo="1110036742">
             <div class="video_loader">
               <div class="film-reel-spinner">
                 <div class="reel"></div>
@@ -366,7 +378,7 @@
               playsinline
               preload="auto"
             >
-              <source class="videos_thum" src="videos_thum/sh.mp4" type="video/mp4" />
+              <source class="videos_thum" src="videos_thum/5.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -511,6 +523,14 @@
               src="images/company/shorta_sharqa.png"
               loading="lazy"
               alt="القيادة العامة لشرطة الشارقة"
+            />
+          </div>
+          <div class="logos_slide">
+            <img
+              class="logos_img_comp lifestyle_img"
+              src="images/company/Horizontal Logo.png"
+              loading="lazy"
+              alt="lifestyle foundation"
             />
           </div>
         </div>
@@ -688,14 +708,15 @@
             <span class="modaona_pen">
               <img class="modaona_pen_img" src="images/modaona_pen.svg " alt="">
             </span>
+            <a class="more_modaona" href="blog.html" target="_blank">ذهاب إلـــــــى المـــــــدونة</a>
           </div>
         </div>
       </section>
       <!-- ////////////////////////////////////// -->
       <!-- ////////////////////////////////////// -->
-      <section class="modaona_container">
-        <div class="container">
-          <div class="modaona_boxes">
+      <!-- <section class="modaona_container"> -->
+        <!-- <div class="container"> -->
+          <!-- <div class="modaona_boxes">
             <div class="single_modaona_box">
               <div class="single_modaona_content">
                 <h5 class="single_modaona_title">
@@ -722,9 +743,46 @@
                 </a>
               </div>
             </div>
+          </div> -->
+          <div class="blog-container blog_home">
+          <div class="container">
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Color Grading">
+                    </div>
+                    <div class="card-content">
+                        <!-- <div class="card-meta">
+                            <span>June 15, 2025</span>
+                            <span class="card-tag">Tutorial</span>
+                        </div> -->
+                        <h3 class="card-title">كيف تبدأ في مجال تحرير الفيديوهات من الصفر؟</h3>
+                        <p class="card-excerpt">في عالمنا اليوم، أصبح الفيديو هو اللغة السائدة. من مقاطع اليوتيوب التعليمية إلى فيديوهات تيك توك الترفيهية، ومن الإعلانات التجارية الجذابة إلى المحتوى التسويقي الرقمي، يلعب الفيديو دوراً محورياً في حياتنا اليومية وعلى جميع المنصات. ومع هذا الانتشار الهائل، تزايد الطلب بشكل كبير على مهارة تحرير الفيديو...</p>
+                        <a href="#" class="read-more read_more_alert">عرض المقال </a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Editing Setup">
+                    </div>
+                    <div class="card-content">
+                        <!-- <div class="card-meta">
+                            <span>May 28, 2025</span>
+                            <span class="card-tag">Workflow</span>
+                        </div> -->
+                        <h3 class="card-title">ما هو المونتاج؟ دليل شامل للمبتدئين</h3>
+                        <p class="card-excerpt">في عالمنا الرقمي المتسارع، أصبح الفيديو هو الوسيلة الأكثر تأثيراً في التواصل ونقل الأفكار، سواء كان ذلك عبر منصات التواصل الاجتماعي، القنوات التلفزيونية، أو حتى في العروض التقديمية الشخصية. ولكن خلف كل فيديو جذاب ومؤثر، تكمن عملية فنية وتقنية معقدة تُعرف بـ "المونتاج" أو "تحرير الفيديو". للكثيرين، قد يبدو المونتاج مجرد قص ولصق لمقاطع الفيديو، لكنه في الحقيقة فن بحد ذاته، يمنح الحياة للقصص ويصقل الرسائل البصرية لتصل إلى الجمهور بأقصى فعالية...</p>
+                        <a href="#" class="read-more read_more_alert">عرض المقال </a>
+                    </div>
+                </article>            
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        <!-- </div> -->
+      <!-- </section> -->
       <!-- /////////////////////////////////// -->
       <!-- /////////////////////////////////// -->
 <!-- <div class="none" style="display: none;"> -->
@@ -805,5 +863,6 @@
     <script src="js/creator_logo.js"></script>
     <script src="js/video_thum_loader.js"></script>
     <script src="js/videos_page.js"></script>
+    <script src="js/blogs.js"></script>
   </body>
 </html>

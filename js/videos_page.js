@@ -19,14 +19,14 @@ document.addEventListener("click", function (e) {
 });
 // /////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////
+// /////////////////////////// shorts //////////////////////////////////
 // /////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////
-// /////////////////////////////////////////////////////////////////////
-document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
+document.querySelectorAll(".thumbnail_js").forEach((img) => {
   img.addEventListener("click", function (e) {
     e.stopPropagation();
 
-    const currentCard = this.closest(".card");
+    const currentCard = this.closest(".card_js");
 
     // Play the video iframe under this thumbnail
     const iframe = currentCard.querySelector("iframe");
@@ -38,7 +38,7 @@ document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
     }
 
     // Show all other thumbnails
-    document.querySelectorAll(".video_thumbnail_image").forEach((otherImg) => {
+    document.querySelectorAll(".thumbnail_js").forEach((otherImg) => {
       if (otherImg !== this) {
         otherImg.style.display = "block";
         setTimeout(() => {
@@ -48,7 +48,7 @@ document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
     });
 
     // Remove hidden class from all cards
-    document.querySelectorAll(".card").forEach((card) => {
+    document.querySelectorAll(".card_js").forEach((card) => {
       card.classList.remove("hide-before", "before-hidden");
     });
 
@@ -66,7 +66,7 @@ document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
 // Click anywhere in body to restore all
 document.body.addEventListener("click", function () {
   // Show all thumbnail images again
-  document.querySelectorAll(".video_thumbnail_image").forEach((img) => {
+  document.querySelectorAll(".thumbnail_js").forEach((img) => {
     img.style.display = "block";
     setTimeout(() => {
       img.classList.remove("disappear");
@@ -74,7 +74,7 @@ document.body.addEventListener("click", function () {
   });
 
   // Reset all card classes
-  document.querySelectorAll(".card").forEach((card) => {
+  document.querySelectorAll(".card_js").forEach((card) => {
     card.classList.remove("hide-before", "before-hidden");
   });
 
@@ -86,3 +86,19 @@ document.body.addEventListener("click", function () {
     });
   });
 });
+
+// /////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////
+// Initialize all Vimeo players on the page
+// document.querySelectorAll(".vimeo_player").forEach((iframe) => {
+//   const player = new Vimeo.Player(iframe);
+
+//   player.on("play", function () {
+//     player.setVolume(1).catch((error) => {
+//       console.error("Volume set failed:", error);
+//     });
+//   });
+
+//   // Optional: Set initial volume in case of browser restrictions
+//   player.setVolume(0.01).catch(() => {});
+// });
