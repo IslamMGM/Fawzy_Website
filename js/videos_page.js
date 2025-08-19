@@ -102,3 +102,54 @@ document.body.addEventListener("click", function () {
 //   // Optional: Set initial volume in case of browser restrictions
 //   player.setVolume(0.01).catch(() => {});
 // });
+
+// ///////////////////////////////////////////////////////////////
+// //////////////////// floating menu ///////////////////////////
+const menuToggle = document.getElementById("menuToggle");
+const menuBox = document.querySelector(".float_menu_box");
+const subs = document.querySelector(".subs");
+const subLinks = document.querySelectorAll(".sub-circle");
+const thumbnail_js_to_closeMenu = document.querySelectorAll(".thumbnail_js");
+
+// Toggle menu when clicking the menu button
+menuToggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // Prevent bubbling
+  menuBox.classList.toggle("active");
+  menuToggle.classList.toggle("active");
+  subs.classList.toggle("active");
+});
+
+// Function to close the menu
+function closeMenu() {
+  menuBox.classList.remove("active");
+  menuToggle.classList.remove("active");
+  subs.classList.remove("active");
+}
+
+// Close the menu when clicking any of the submenu links
+subLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
+});
+
+// ///////////////////////////////////////
+thumbnail_js_to_closeMenu.forEach((thumbnail_js_to_closeMenu) => {
+  thumbnail_js_to_closeMenu.addEventListener("click", () => {
+    closeMenu();
+  });
+});
+
+// Close the menu when clicking ANY link or button on the page
+document.querySelectorAll("a, button").forEach((el) => {
+  el.addEventListener("click", () => {
+    closeMenu();
+  });
+});
+
+// Close the menu when clicking anywhere outside the menu box
+document.addEventListener("click", (e) => {
+  if (!menuBox.contains(e.target) && e.target !== menuToggle) {
+    closeMenu();
+  }
+});
