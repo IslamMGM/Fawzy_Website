@@ -32,9 +32,17 @@ document.querySelectorAll(".thumbnail_js").forEach((img) => {
     const iframe = currentCard.querySelector("iframe");
     if (iframe) {
       const player = new Vimeo.Player(iframe);
-      player.play().catch((error) => {
-        console.warn("Vimeo play error:", error.name);
-      });
+
+      // Force full volume first
+      player
+        .setVolume(1)
+        .then(() => {
+          // Play only after volume is set
+          return player.play();
+        })
+        .catch((error) => {
+          console.warn("Play with sound failed:", error.name, error);
+        });
     }
 
     // Show all other thumbnails
